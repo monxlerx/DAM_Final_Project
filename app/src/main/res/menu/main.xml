@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_login"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:title="@string/action_login_register"
+        android:icon="@drawable/ic_face_black_24dp"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_order"
+        android:orderInCategory="100"
+        android:title="@string/action_order"
+        android:icon="@drawable/ic_local_mall_24_dos"
+        app:showAsAction="always" />
+
 </menu>

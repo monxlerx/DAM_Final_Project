@@ -1,4 +1,4 @@
-package com.example.dam_project.ui.slideshow;
+package com.example.dam_project.ui.help;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.dam_project.R;
 
-public class SlideshowFragment extends Fragment {
+public class HelpFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private HelpViewModel helpViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        helpViewModel =
+                ViewModelProviders.of(this).get(HelpViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_help, container, false);
+        final TextView textView = root.findViewById(R.id.text_help);
+        helpViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

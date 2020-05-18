@@ -5,16 +5,20 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_insert_drive_file_24px"
+            android:title="@string/menu_orders" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_promotions"
+            android:icon="@drawable/ic_card_giftcard_24px"
+            android:title="@string/menu_promotions" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help_24px"
+            android:title="@string/menu_help" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_feedback_24px"
+            android:title="@string/menu_feedback" />
     </group>
 </menu>
