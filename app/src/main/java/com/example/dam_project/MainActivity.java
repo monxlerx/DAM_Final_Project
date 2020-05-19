@@ -100,8 +100,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    //TODO Cambiar el orden de los fragments
-    //TODO diseño del login y comprobar lo de Firebase
     //TODO Añadir color rosita palo a los botonos
 
 
