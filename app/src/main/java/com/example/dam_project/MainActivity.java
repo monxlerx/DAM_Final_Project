@@ -100,7 +100,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    //TODO Añadir color rosita palo a los botonos
+
+    //TODO cree un proyecto duplicado comprobar lo de Github
+    //TODO crear clase email y enviar los datos del feedback
+    //TODO hacer lo de help, acordate que primero hay que estar logeado. Rellenar los datos
+    //TODO crear la base de datos. ¿Cómo hacer si meter el sqllite o una base de datos externa?
 
 
 
