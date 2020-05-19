@@ -3,4 +3,7 @@
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#FC3F40</color>
+    <color name="color_icon">#FC3F40</color>
+    <color name="colorToolbarText">#484848</color>
+    <color name="colorNavigationText">#404355</color>
 </resources>

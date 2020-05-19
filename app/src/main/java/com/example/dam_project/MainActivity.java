@@ -1,5 +1,6 @@
 package com.example.dam_project;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,10 +8,12 @@ import android.view.Menu;
 import android.widget.Button;
 
 import com.example.dam_project.ui.login.LoginActivity;
+import com.example.dam_project.ui.order.OrderFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -43,17 +46,23 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_orders, R.id.nav_promotions, R.id.nav_help)
+                R.id.nav_menuBar, R.id.nav_orders, R.id.nav_promotions, R.id.nav_help, R.id.nav_feedback)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+
+
         myButton = (Button) findViewById(R.id.prueba);
+
+
 
         //Remove navigation bar to allow full screen view when the activity is onCreate
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+
+
     }
 
     @Override
@@ -90,6 +99,11 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
     }
+
+    //TODO Cambiar el orden de los fragments
+    //TODO diseño del login y comprobar lo de Firebase
+    //TODO Añadir color rosita palo a los botonos
+
 
 
 }

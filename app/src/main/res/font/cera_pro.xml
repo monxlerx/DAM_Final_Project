@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Regular-->
+    <font
+        android:font="@font/cera_pro_regular"
+        android:fontStyle="normal"
+        android:fontWeight="400" />
+
+    <!--Black-->
+    <font
+        android:font="@font/cera_pro_black"
+        android:fontStyle="normal"
+        android:fontWeight="700" />
+
+    <!--Bold-->
+    <font
+        android:font="@font/cera_pro_bold"
+        android:fontStyle="normal"
+        android:fontWeight="700" />
+
+    <!--Medium-->
+    <font
+        android:font="@font/cera_pro_medium"
+        android:fontStyle="normal"
+        android:fontWeight="400" />
+
+</font-family>

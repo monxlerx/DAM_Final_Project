@@ -6,15 +6,40 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+        <item name="fontFamily">@font/cera_pro_regular</item>
     </style>
 
+    <!--Action Bar-->
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Select a new color for the hamburger-->
+    <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/colorToolbarText</item>
+    </style>
+
+    <!--Select a new color and font for the text in the toolbar-->
+    <style name="ToolBarStyle">
+        <item name="android:textColorPrimary">@color/colorToolbarText</item>
+    </style>
+
+    <!--Navigation Drawer-->
+    <style name="NavDrawer">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="fontFamily">@font/cera_pro_bold</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="NavDrawerText">
+        <item name="android:textColor">@color/colorNavigationText</item>
+    </style>
 
 </resources>

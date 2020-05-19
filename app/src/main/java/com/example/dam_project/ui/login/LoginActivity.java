@@ -2,9 +2,11 @@ package com.example.dam_project.ui.login;
 
 import android.app.Activity;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -146,4 +148,10 @@ public class LoginActivity extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
     }
+
+    //Back to the previous activity
+    public void moveBack(View view) {
+        onBackPressed();
+    }
+
 }
