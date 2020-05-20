@@ -42,4 +42,26 @@
         <item name="android:textColor">@color/colorNavigationText</item>
     </style>
 
+    <!--TextView-->
+    <style name="TextViewIntro">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+    <!--Radiogroup-->
+    <style name="RadioGroup">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+    <!--Feedback Button Style-->
+    <style name="FeedbackButton">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
 </resources>

@@ -3,6 +3,7 @@ package com.example.dam_project;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
@@ -54,9 +55,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
 
-
         myButton = (Button) findViewById(R.id.prueba);
-
 
 
         //Remove navigation bar to allow full screen view when the activity is onCreate
@@ -70,6 +69,22 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    //Add funtionality to the items on the menu
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_login:
+                Intent i = new Intent(this, LoginActivity.class);
+                startActivity(i);
+                return true;
+
+                //TODO Hacer el caso 2 para que vaya a el carrito (Mirar si es con un fragment o con una actividad)
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override
@@ -95,16 +110,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //My tests
-    public void prueba(View v) {
+    public void moveToLogin(View v) {
         Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
     }
 
 
-    //TODO cree un proyecto duplicado comprobar lo de Github
     //TODO crear clase email y enviar los datos del feedback
     //TODO hacer lo de help, acordate que primero hay que estar logeado. Rellenar los datos
     //TODO crear la base de datos. ¿Cómo hacer si meter el sqllite o una base de datos externa?
+
+    //TODO Crear sendFeedback function
 
 
 

@@ -27,6 +27,18 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_settings">Settings</string>
 
+    <!--Feedback fragment-->
+    <string name="text_feedback_intro_1">How was your experience with the restaurant or the app?</string>
+    <string name="text_feedback_intro_2">Please tell us what you liked/did not like? We are glad to hear from you</string>
+    <string name="rbAwful">Awful</string>
+    <string name="rbBad">Bad</string>
+    <string name="rbNormal">Normal</string>
+    <string name="rbGood">Good</string>
+    <string name="rbSuperb">Superb</string>
+    <string name="etComment">Your comment here</string>
+    <string name="btnFeedback">Send us your opinion</string>
+
+
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
