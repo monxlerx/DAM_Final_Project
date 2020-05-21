@@ -27,6 +27,16 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_settings">Settings</string>
 
+    <!--Menu Bar Fragment-->
+    <string name="text_menu_intro">What would you like to eat?</string>
+    <string name="text_menu_salads">Salads</string>
+    <string name="text_menu_starters">Starters</string>
+    <string name="text_menu_meat">Meat</string>
+    <string name="text_menu_fish">Fish</string>
+    <string name="text_menu_desserts">Desserts</string>
+    <string name="text_menu_drinks">Drinks</string>
+
+
     <!--Feedback fragment-->
     <string name="text_feedback_intro_1">How was your experience with the restaurant or the app?</string>
     <string name="text_feedback_intro_2">Please tell us what you liked/did not like? We are glad to hear from you</string>

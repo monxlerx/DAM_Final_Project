@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
 
-        myButton = (Button) findViewById(R.id.prueba);
 
 
         //Remove navigation bar to allow full screen view when the activity is onCreate

@@ -6,4 +6,5 @@
     <color name="color_icon">#FC3F40</color>
     <color name="colorToolbarText">#484848</color>
     <color name="colorNavigationText">#404355</color>
+    <color name="colorMenuBar">#5D6275</color>
 </resources>

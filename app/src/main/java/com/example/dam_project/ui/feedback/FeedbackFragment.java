@@ -27,15 +27,11 @@ public class FeedbackFragment extends Fragment {
         feedbackViewModel =
                 ViewModelProviders.of(this).get(FeedbackViewModel.class);
         View root = inflater.inflate(R.layout.fragment_feedback, container, false);
-        final TextView textView = root.findViewById(R.id.text_feedback);
-        feedbackViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
 
     }
+
+    //TODO controlar los estados del fragemen onResume / onPause
 
 }

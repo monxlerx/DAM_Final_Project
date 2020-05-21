@@ -26,13 +26,7 @@ public class MenuBarFragment extends Fragment {
         menuBarViewModel =
                 ViewModelProviders.of(this).get(MenuBarViewModel.class);
         View root = inflater.inflate(R.layout.fragment_menu_bar, container, false);
-        final TextView textView = root.findViewById(R.id.text_menuBar);
-        menuBarViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 
