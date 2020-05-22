@@ -47,4 +47,9 @@ public class SettingsActivity extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
     }
+
+    //Back to the previous activity
+    public void moveBack(View view) {
+        onBackPressed();
+    }
 }

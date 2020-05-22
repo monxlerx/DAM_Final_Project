@@ -32,4 +32,20 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory app:title="@string/language">
+
+        <SwitchPreferenceCompat
+            app:key="lang"
+            app:title="@string/language_title"
+            app:summaryOn="@string/lang_summary_on"
+            app:summaryOff="@string/lang_summary_off" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/shared">
+
+        <SwitchPreferenceCompat
+            app:key="share"
+            app:title="Enable share option" />
+    </PreferenceCategory>
+
 </PreferenceScreen>

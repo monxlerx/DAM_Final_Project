@@ -28,10 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/text_menu_intro"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="22dp" />
+                    style="@style/MenuCardsTextTop"/>
             </RelativeLayout>
 
         </LinearLayout>
@@ -48,11 +45,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                style="@style/MenuCards">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -69,10 +64,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:textSize="18sp"
                         android:text="@string/text_menu_salads"
-                        android:textColor="@color/colorMenuBar"/>
+                        style="@style/MenuCardsTextView"/>
 
                 </LinearLayout>
 
@@ -81,11 +74,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                style="@style/MenuCards">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -102,10 +93,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:textSize="18sp"
                         android:text="@string/text_menu_starters"
-                        android:textColor="@color/colorMenuBar"/>
+                        style="@style/MenuCardsTextView"/>
 
                 </LinearLayout>
 
@@ -114,11 +103,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                style="@style/MenuCards">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -135,10 +122,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:textSize="18sp"
                         android:text="@string/text_menu_meat"
-                        android:textColor="@color/colorMenuBar"/>
+                        style="@style/MenuCardsTextView"/>
 
                 </LinearLayout>
 
@@ -147,11 +132,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                style="@style/MenuCards">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -168,10 +151,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:textSize="18sp"
                         android:text="@string/text_menu_fish"
-                        android:textColor="@color/colorMenuBar"/>
+                        style="@style/MenuCardsTextView"/>
 
                 </LinearLayout>
 
@@ -180,11 +161,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                style="@style/MenuCards">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -201,10 +180,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:textSize="18sp"
                         android:text="@string/text_menu_desserts"
-                        android:textColor="@color/colorMenuBar"/>
+                        style="@style/MenuCardsTextView"/>
 
                 </LinearLayout>
 
@@ -213,11 +190,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 app:cardElevation="6dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                style="@style/MenuCards">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -234,10 +209,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:textSize="18sp"
                         android:text="@string/text_menu_drinks"
-                        android:textColor="@color/colorMenuBar"/>
+                        style="@style/MenuCardsTextView"/>
 
                 </LinearLayout>
 

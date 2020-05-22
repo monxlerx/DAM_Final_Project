@@ -42,6 +42,29 @@
         <item name="android:textColor">@color/colorNavigationText</item>
     </style>
 
+    <!--Menu Bar Fragment-->
+    <style name="MenuCardsTextTop">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="MenuCards">
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_margin">12dp</item>
+
+    </style>
+
+    <style name="MenuCardsTextView">
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorMenuBar</item>
+    </style>
+
+
+
     <!--TextView-->
     <style name="TextViewIntro">
         <item name="android:textAlignment">center</item>
