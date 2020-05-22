@@ -19,6 +19,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.dam_project.MainActivity;
 import com.example.dam_project.R;
 import com.example.dam_project.SettingsActivity;
+import com.example.dam_project.TermsConditions;
 import com.example.dam_project.ui.feedback.FeedbackFragment;
 
 public class HelpFragment extends Fragment {
@@ -26,7 +27,7 @@ public class HelpFragment extends Fragment {
     private HelpViewModel helpViewModel;
     ListView lv;
     ArrayAdapter<String> adapter;
-    String[] names = {"Hola", "Adios", "Terms and conditions", "Settings"};
+    String[] names = {"Hola", "Terms and conditions", "Settings"};
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -49,19 +50,15 @@ public class HelpFragment extends Fragment {
                         break;
 
                     case 1:
-                        i = new Intent(getActivity(), HelpFragment.class);
+                        i = new Intent(getActivity(), TermsConditions.class);
                         startActivity(i);
                         break;
 
                     case 2:
-                        i = new Intent(getActivity(), FeedbackFragment.class);
+                        i = new Intent(getActivity(), SettingsActivity.class);
                         startActivity(i);
                         break;
 
-                    case 3:
-                        i = new Intent(getContext(), SettingsActivity.class);
-                        startActivity(i);
-                        break;
                 }
             }
         });

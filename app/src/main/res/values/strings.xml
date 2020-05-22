@@ -70,6 +70,66 @@
     <string name="lang_summary_on">English</string>
     <string name="lang_summary_off">Spanish</string>
 
-    <!--Shared Use-->
+    <!--Terms and conditions-->
+    <string name="title">TERMS OF USE AND PRIVACY POLICY FOR MOBILE APPLICATIONS AND ACCESS FROM MOBILE DEVICES
+    </string>
+    <string name="first_bullet">GENERAL CONDITIONS OF USE</string>
+    <string name="first_para_1">The purpose of this document is to establish the General Conditions of Use of the mobile applications owned by The Misfit Nation (owned by Noel Íñiguez Fernández),
+        (hereinafter The Misfit Nation with registered office in Avilés (33402 Asturias), reserves the right to modify these conditions of use in order to adapt them to the current legislation applicable at
+        all times These conditions of use do not exclude the possibility that application services are specified, due to their particular characteristics, sometimes, in addition to the General Conditions
+        of Use, its own particular conditions of use (hereinafter the Particular Conditions).
+    </string>
+
+    <string name="second_para_1">The Company may, at any time and without the need for prior notice, make changes and updates to these Terms of Use and the Privacy Policy. These changes will be published on
+        the Web and in the Application (s) and will be effective from the moment of their publication. As a consequence of the above, the User must evaluate if there are changes in these Conditions and, whether
+        there is express consent or not, if the User continues to use the Service after publication, this implies their acceptance and acceptance. In case you do not agree with the updates to the Terms of Use
+        or the Privacy Policy, you can opt out of using the Service. Access and download of the application is free except for the cost of connection through the telecommunications network provided by the access
+        provider contracted by users. Certain services are exclusive to our clients and their access is restricted. The download and use of the application attributes the condition of user of the same (hereinafter,
+        the "User") and the implication of reading, understanding and accepting all the terms and conditions contained herein.
+    </string>
+    <string name="second_bullet">USE OF THE MOBILE APP AND ITS SERVICES</string>
+    <string name="first_para_2">The User acknowledges and accepts that the use of the contents and / or services offered by this mobile application will be at their sole risk and / or responsibility. The User agrees to
+        use this mobile application and all its content and Services in accordance with the law, morality, public order and these Conditions of Use, and the Particular Conditions that, if applicable, apply to it.</string>
+    <string name="second_para_2">Likewise, it undertakes to make appropriate use of the services and / or contents of the mobile application and not to use them to carry out illicit or criminal activities that violate the
+        rights of third parties and / or that infringe the regulations on intellectual and industrial property. , or any other rules of the applicable legal system.
+    </string>
+    <string name="third_bullet">INTELLECTUAL AND INDUSTRIAL PROPERTY</string>
+    <string name="first_para_3">The Misfit Nation reserves all rights to trademarks, trade names or other distinctive signs, patents, and intellectual property, with respect to the content and design of the application. All the contents of the same,
+        including without limitation, texts, graphics, images, its design and the intellectual property rights that may correspond to said contents, as well as the brands, commercial names or any other distinctive sign are the property of
+        The Misfit Nation.
+    </string>
+    <string name="forth_bullet"> EXCLUSION OF GUARANTEES. RESPONSIBILITY</string>
+    <string name="first_para_4">The Misfit Nation does not guarantee at all times the availability of access and continuity of operation of this mobile application and its services, so it will not be liable, within the limits established
+        in the current Legal Order, for damages caused to the User as a consequence of the unavailability, access failures and lack of continuity of this mobile application and its Services. The Misfit Nation will be solely and exclusively
+        responsible for the Services it provides for itself and for the contents directly originated by the company and identified with its copyright. Said responsibility shall be excluded in cases where there are compelling causes of force
+        major or in cases in which the configuration of the User devices is not adequate to allow the correct use of the Internet services provided by The Misfit Nation. Downloading, accessing and using the application on mobile or similar
+        devices does not imply the obligation of The Misfit Nation to control the absence of viruses, worms or any other harmful computer element</string>
+    <string name="second_para_4">The Misfit Nation will not be responsible, indirectly or subsidiarily, for damages of any nature derived from the use of the Services and Contents of the application by Users or that may arise from the lack of
+        truthfulness, accuracy and / or authenticity of the data or information provided by the Users, or the impersonation of a third party by a User in any kind of action through this mobile application. Therefore, the use of this application
+        does not imply the obligation on the part of FORTY SOFT to check the veracity, accuracy, adequacy, suitability, completeness and timeliness of the information provided through it.</string>
+    <string name="fifth_bullet">PRIVACY POLICY</string>
+    <string name="first_para_5">The Misfit Nation wishes to inform users and clients of the application / s, the policy carried out with respect to the treatment of all personal data that by the use of the functions of the application / s is provide the company.</string>
+    <string name="second_para_5">All the data that is requested from users and clients through the application for mobile devices will be necessary to provide the service object of the service, by virtue of which the application / s have been downloaded and installedin the corresponding devices.</string>
+    <string name="sixth_bullet">CONSENT</string>
+    <string name="first_para_6">The use of the application will take place to the treatment of personal data that The Misfit Nation, where appropriate, carries out an agreement in accordance with the internal rules and procedures established for this purpose,
+        which are known by customers and users and controlled by . The Inappropriate Nation, under the provisions of article 12 of Organic Law 15/1999, of December 13, on the Protection of Personal Data, may subcontract with other companies or professionals the
+        material execution of all or any of the the provision of services without in any case such communication constituting a data session, guaranteeing the clients and users of the application that the data provided will not be applied or used for a purpose
+        other than that established.
+    </string>
+    <string name="seventh_bullet">LOPD AND DATA QUALITY</string>
+    <string name="first_para_7">Users and clients require information on compliance with all the technical and organizational measures necessary to determine the security of personal data, avoiding its alteration, loss, treatment or unauthorized access.
+        The data that is communicated through the application will
+        be accurate and updated, and the updating of this data will be the sole responsibility of the clients and users.
+    </string>
+    <string name="eight_bullet">EXERCISE OF THE RIGHTS OF ACCESS, RECTIFICATION, CANCELLATION AND OPPOSITION</string>
+    <string name="first_para_8">The Misfit Nation informs that users can exercise their rights of access, rectification, cancellation and opposition by sending an email to infomisfitnation@gmail.es</string>
+    <string name="second_para_8">The Msfit Nation informs users and clients that, in accordance with the provisions of the LOPD and the Regulation on Security Measures, it has adopted the technical and organizational measures necessary for the security of personal data and avoid alteration , loss, treatment or unauthorized
+        access, account of the state of technology, the nature of the data stored and the risks to which they are affected.
+    </string>
+    <string name="ninth_bullet">LAW AND JURISDICTION</string>
+    <string name="first_para_9">The questions related to the Conditions of Use and Privacy Policy, as well as all those questions that lie and have a partial or complete relationship with the services provided through the application, are governed in each and every one of
+        its ends by Spanish law, expressly renouncing the parties to the jurisdiction that corresponds to them, and submitting to the Courts and Tribunals of Oviedo
+    </string>
+
 
 </resources>
