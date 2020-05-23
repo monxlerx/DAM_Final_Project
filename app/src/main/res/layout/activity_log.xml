@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.LoginActivity">
+    tools:context=".LogActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -22,7 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"/>
     </LinearLayout>
-
 
     <LinearLayout
         android:gravity="center"
@@ -45,12 +44,12 @@
             android:textStyle="bold"
             android:textSize="40sp"
             android:textColor="#fff"
-            android:text="Sign in"
+            android:text="@string/title_activity_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/editTextEmail"
             android:textColor="#fff"
             android:textColorHint="#eee"
             android:paddingStart="10dp"
@@ -64,7 +63,7 @@
             android:textSize="17sp" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/editTextPassword"
             android:textColor="#fff"
             android:textColorHint="#eee"
             android:paddingStart="10dp"
@@ -81,7 +80,7 @@
             android:textSize="17sp" />
 
         <Button
-            android:id="@+id/login"
+            android:id="@+id/buttonLogin"
             android:paddingRight="20dp"
             android:paddingLeft="20dp"
             android:background="@drawable/round_corner_buttom"
@@ -89,10 +88,19 @@
             android:textColor="#777"
             android:layout_width="wrap_content"
             android:layout_height="35dp" />
+
+        <TextView
+            android:id="@+id/textViewCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal" />
+
         <TextView
             android:layout_marginTop="20dp"
-            android:textColor="#fff"
-            android:text="Forgot Password?"
+            android:textColor="#5D6275"
+            android:text="@string/forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -119,7 +127,7 @@
 
         <TextView
             android:layout_marginBottom="10dp"
-            android:text="Or Signup with"
+            android:text="@string/extra_signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <LinearLayout

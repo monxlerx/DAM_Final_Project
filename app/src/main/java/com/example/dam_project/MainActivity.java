@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
 
-import com.example.dam_project.ui.login.LoginActivity;
 import com.example.dam_project.ui.order.OrderFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -75,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_login:
-                Intent i = new Intent(this, LoginActivity.class);
+                Intent i = new Intent(this, LogActivity.class);
                 startActivity(i);
                 return true;
 
@@ -110,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
     //My tests
     public void moveToLogin(View v) {
-        Intent i = new Intent(this, LoginActivity.class);
+        Intent i = new Intent(this, LogActivity.class);
         startActivity(i);
     }
 

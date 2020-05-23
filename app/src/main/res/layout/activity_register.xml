@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_weight="4"
+            android:src="@drawable/ic_login"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <View
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_arrow_back_24px"
+            android:backgroundTint="#5D6275"
+            android:onClick="moveBack" />
+
+        <TextView
+            android:layout_margin="?actionBarSize"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#fff"
+            android:text="@string/title_activity_Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editTextUserName"
+            android:textColor="#fff"
+            android:textColorHint="#eee"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:hint="@string/prompt_username"
+            android:selectAllOnFocus="true"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/rounded_corner"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:textColor="#fff"
+            android:textColorHint="#eee"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:hint="@string/prompt_email"
+            android:selectAllOnFocus="true"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/rounded_corner"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:textColor="#fff"
+            android:textColorHint="#eee"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:hint="@string/prompt_password"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/rounded_corner"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/round_corner_buttom"
+            android:text="@string/action_sign_up"
+            android:textColor="#777"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+
+        <TextView
+            android:id="@+id/textViewLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="64dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:text="@string/extra_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_marginRight="15dp"
+                android:background="@drawable/google"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <ImageButton
+                android:layout_marginRight="15dp"
+                android:background="@drawable/facebook_box"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <ImageButton
+                android:background="@drawable/twitter"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

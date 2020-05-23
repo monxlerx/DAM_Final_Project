@@ -17,11 +17,17 @@
 
     <string name="home_second">Home Second</string>
     <string name="title_activity_login">Iniciar sesión</string>
+    <string name="title_activity_Register">Regístrate</string>
+    <string name="prompt_username">Usuario</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Contraseña</string>
-    <string name="action_sign_in">Inicia sesión o registrate</string>
+    <string name="action_sign_in">Inicia sesión</string>
+    <string name="action_sign_up">Regístrate</string>
     <string name="action_sign_in_short">Inicia sesión</string>
+    <string name="forgot_password">Olvidaste la contraseña</string>
+    <string name="extra_signup">O Regístrate con</string>
     <string name="welcome">"Bienvenido !"</string>
+    <string name="no_account">Aún no tengo cuenta, crear una</string>
     <string name="invalid_username">No es un usuario válido</string>
     <string name="invalid_password">La contraseña debe tener más de 5 caracteres</string>
     <string name="login_failed">"Inicio de sesión fallido"</string>
