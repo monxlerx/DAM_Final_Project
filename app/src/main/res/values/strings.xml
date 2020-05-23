@@ -36,6 +36,15 @@
     <string name="text_menu_desserts">Desserts</string>
     <string name="text_menu_drinks">Drinks</string>
 
+    <!--About us fragment-->
+    <string name="about_us_tittle1">From the heart of Asturias</string>
+    <string name="about_us_subtitle1">Casa Juan rises in the middle of paradise</string>
+    <string name="about_us_tittle2">A kitchen that inspires</string>
+    <string name="about_us_subtitle2">A place where tradition and avant-garde come together</string>
+    <string name="about_us_tittle3">The best flavors await you</string>
+    <string name="about_us_subtittle3">We use top quality local products</string>
+    <string name="about_us_tittle4">We have the best team</string>
+    <string name="about_us_subtittle4">Pasion and experience are our star ingredients</string>
 
     <!--Feedback fragment-->
     <string name="text_feedback_intro_1">How was your experience with the restaurant or the app?</string>

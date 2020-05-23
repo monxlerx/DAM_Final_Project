@@ -1,22 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.promotion.PromotionFragment">
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/text_promotion"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.promotion.PromotionFragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us_tittle1"
+            style="@style/about_us_bullet">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us_subtitle1"
+            style="@style/about_us_paragraph">
+
+        </TextView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:scrollIndicators="top"
+                android:scrollbarStyle="insideOverlay">
+
+                <ImageView
+                    android:src="@drawable/asturias2"
+                    style="@style/about_us_image_1" />
+
+                <ImageView
+                    android:src="@drawable/asturias1"
+                    style="@style/about_us_image_1" />
+
+                <ImageView
+                    android:src="@drawable/ast13"
+                    style="@style/about_us_image_1"/>
+
+                <ImageView
+                    android:src="@drawable/ast14"
+                    style="@style/about_us_image_1"/>
+
+                <ImageView
+                    android:src="@drawable/ast18"
+                    style="@style/about_us_image_1"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us_tittle2"
+            style="@style/about_us_bullet">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us_subtitle2"
+            style="@style/about_us_paragraph">
+
+        </TextView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:scrollIndicators="top"
+                android:scrollbarStyle="insideOverlay">
+
+                <ImageView
+                    android:src="@drawable/restau2"
+                    style="@style/about_us_image_2"/>
+
+                <ImageView
+                    android:src="@drawable/rest6"
+                    style="@style/about_us_image_2"/>
+
+                <ImageView
+                    android:src="@drawable/rest9"
+                    style="@style/about_us_image_2"
+                    android:layout_marginRight="20dp"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us_tittle3"
+            style="@style/about_us_bullet">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us_subtittle3"
+            style="@style/about_us_paragraph">
+
+        </TextView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:scrollIndicators="top"
+                android:scrollbarStyle="insideOverlay">
+
+
+                <ImageView
+                    android:src="@drawable/food1"
+                    style="@style/about_us_image_1"/>
+
+                <ImageView
+                    android:src="@drawable/tapa1"
+                    style="@style/about_us_image_1" />
+
+                <ImageView
+                    android:src="@drawable/fabada2"
+                    style="@style/about_us_image_1"/>
+
+                <ImageView
+                    android:src="@drawable/cac1"
+                    style="@style/about_us_image_1"/>
+
+                <ImageView
+                    android:src="@drawable/arroz2"
+                    style="@style/about_us_image_1"
+                    android:layout_marginRight="20dp"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us_tittle4"
+            style="@style/about_us_bullet">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/about_us_subtittle4"
+            style="@style/about_us_paragraph">
+
+        </TextView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:scrollIndicators="top"
+                android:scrollbarStyle="insideOverlay">
+
+                <ImageView
+                    android:src="@drawable/chef2"
+                   style="@style/about_us_image_2"/>
+
+                <ImageView
+                    android:src="@drawable/chef3"
+                    style="@style/about_us_image_2"/>
+
+                <ImageView
+                    android:src="@drawable/chef1"
+                    style="@style/about_us_image_2"
+                    android:layout_marginRight="20dp"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</ScrollView>

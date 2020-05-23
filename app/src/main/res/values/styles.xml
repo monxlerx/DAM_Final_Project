@@ -110,4 +110,36 @@
         <item name="android:layout_marginTop">10dp</item>
     </style>
 
+
+    <!--About us-->
+    <style name="about_us_bullet">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/colorNavigationText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="about_us_paragraph">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="about_us_image_1">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+
+    <style name="about_us_image_2">
+        <item name="android:layout_width">360dp</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+
 </resources>
