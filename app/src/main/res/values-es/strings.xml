@@ -32,6 +32,8 @@
     <string name="invalid_password">La contraseña debe tener más de 5 caracteres</string>
     <string name="login_failed">"Inicio de sesión fallido"</string>
     <string name="title_activity_settings">Configuración</string>
+    <string name="title_activity_confirm">Has iniciado sesión,</string>
+    <string name="log_out">Cerrar Sesión</string>
 
     <!--Menu Bar Fragment-->
     <string name="text_menu_intro">¿Qué te apetece comer?</string>
@@ -73,7 +75,6 @@
     <string name="rbSuperb">Magnífico</string>
     <string name="etComment">Tu comentario aquí</string>
     <string name="btnFeedback">Envía tu comentario</string>
-
 
     <!-- Preference Titles -->
     <string name="messages_header">Mensajes</string>

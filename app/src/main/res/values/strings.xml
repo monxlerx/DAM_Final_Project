@@ -32,6 +32,8 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_confirm">You are logged in,</string>
+    <string name="log_out">Log out</string>
 
     <!--Menu Bar Fragment-->
     <string name="text_menu_intro">What would you like to eat?</string>

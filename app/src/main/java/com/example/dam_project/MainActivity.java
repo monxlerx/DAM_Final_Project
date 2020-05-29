@@ -1,19 +1,20 @@
 package com.example.dam_project;
 
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.Toast;
 
-import com.example.dam_project.ui.order.OrderFragment;
+import com.example.dam_project.loginregister.ConfirmLoginActivity;
+import com.example.dam_project.loginregister.LogActivity;
+import com.example.dam_project.sessionmanagment.UserSessionManager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -22,8 +23,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity {
 
+    public UserSessionManager session;
     private AppBarConfiguration mAppBarConfiguration;
     private Button myButton;
 
@@ -33,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,24 +46,33 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_menuBar, R.id.nav_orders, R.id.nav_promotions, R.id.nav_help, R.id.nav_feedback)
                 .setDrawerLayout(drawer)
                 .build();
+
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+        //Check if user has been logged and get data from SharedPreferences
+        //User Session Manager
+        session = new UserSessionManager(getApplicationContext());
 
+        HashMap<String, String> user = session.getUserDetails();
+        String name = user.get(UserSessionManager.KEY_NAME);
+        String email = user.get(UserSessionManager.KEY_EMAIL);
 
+        Toast.makeText(this, "Bienvenido " + name , Toast.LENGTH_LONG).show();
 
         //Remove navigation bar to allow full screen view when the activity is onCreate
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-
 
     }
 
@@ -69,14 +83,20 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    //Add funtionality to the items on the menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_login:
-                Intent i = new Intent(this, LogActivity.class);
-                startActivity(i);
-                return true;
+                    Intent intent;
+                    if(session.isUserLoggedIn()) {
+                        intent = new Intent(this, ConfirmLoginActivity.class);
+                    } else {
+                        intent = new Intent(this, LogActivity.class);
+                    }
+
+                    startActivity(intent);
+                    finish();
+                    return true;
 
                 //TODO Hacer el caso 2 para que vaya a el carrito (Mirar si es con un fragment o con una actividad)
 
@@ -112,14 +132,5 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, LogActivity.class);
         startActivity(i);
     }
-
-
-    //TODO crear clase email y enviar los datos del feedback
-    //TODO hacer lo de help, acordate que primero hay que estar logeado. Rellenar los datos
-    //TODO crear la base de datos. ¿Cómo hacer si meter el sqllite o una base de datos externa?
-
-    //TODO Crear sendFeedback function
-
-
 
 }

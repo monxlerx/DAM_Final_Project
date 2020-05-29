@@ -1,4 +1,4 @@
-package com.example.dam_project;
+package com.example.dam_project.loginregister;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,12 +12,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dam_project.MainActivity;
+import com.example.dam_project.R;
 import com.example.dam_project.data.model.SqliteHelper;
 import com.example.dam_project.data.model.User;
+import com.example.dam_project.sessionmanagment.UserSessionManager;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LogActivity extends AppCompatActivity {
+
+    //User session Manager class
+    UserSessionManager session;
 
     //Declaration EditTexts
     EditText editTextEmail;
@@ -37,6 +43,10 @@ public class LogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log);
+
+        //User Session Manager
+        session = new UserSessionManager(getApplicationContext());
+
         sqliteHelper = new SqliteHelper(this);
         initCreateAccountTextView();
         initViews();
@@ -52,6 +62,7 @@ public class LogActivity extends AppCompatActivity {
                     //Get values from EditText fields
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
+                    String name;
 
                     //Authenticate user
                     User currentUser = sqliteHelper.Authenticate(new User(null, null, Email, Password));
@@ -59,6 +70,12 @@ public class LogActivity extends AppCompatActivity {
                     //Check Authentication is successful or not
                     if (currentUser != null) {
                         Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
+
+                        name = currentUser.userName;
+
+                        //Check and add values to session
+                        session.checkLogin();
+                        session.createUserLoginSession(name, Email);
 
                         Intent intent = new Intent(LogActivity.this, MainActivity.class);
                         startActivity(intent);

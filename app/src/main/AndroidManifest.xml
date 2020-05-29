@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="LockedOrientationActivity">
-
+        <activity android:name=".loginregister.ConfirmLoginActivity"></activity>
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
@@ -26,17 +26,9 @@
 
         <activity android:name=".products.ProductsActivity" />
         <activity android:name=".productdetail.ProductDetailActivity" />
-        <activity
-            android:name=".addeditproduct.AddEditProductActivity"
-            android:label="@string/title_activity_add_edit_product">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LogActivity" />
+        <activity android:name=".addeditproduct.AddEditProductActivity" />
+        <activity android:name=".loginregister.RegisterActivity" />
+        <activity android:name=".loginregister.LogActivity" />
         <activity android:name=".TermsConditions" />
         <activity
             android:name=".SettingsActivity"

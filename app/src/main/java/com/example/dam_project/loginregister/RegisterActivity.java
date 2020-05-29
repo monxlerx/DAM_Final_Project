@@ -1,4 +1,4 @@
-package com.example.dam_project;
+package com.example.dam_project.loginregister;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dam_project.R;
 import com.example.dam_project.data.model.SqliteHelper;
 import com.example.dam_project.data.model.User;
 import com.google.android.material.snackbar.Snackbar;
