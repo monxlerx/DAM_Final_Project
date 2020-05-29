@@ -52,6 +52,17 @@
     <string name="about_us_tittle4">Contamos con el mejor equipo</string>
     <string name="about_us_subtittle4">Pasión y experiencia son nuestros ingredientes estrella</string>
 
+    <!--Products-->
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+    <string name="title_activity_lawyer_detail">Detalle</string>
+    <string name="large_text"> Es un texto de prueba
+    </string>
+    <string name="action_edit">Editar</string>
+    <string name="title_activity_add_edit">Añadir/Editar Productp</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="field_error">Inserta un valor</string>
+    <string name="action_delete">Borrar</string>
+
     <!--Feedback fragment-->
     <string name="text_feedback_intro_1">¿Cuál ha sido tu experiencia con el restaurante o con la app?</string>
     <string name="text_feedback_intro_2">Por favor, dinos que es lo que te ha gustado y lo que no. Estamos encantados de oir tus comentarios</string>
