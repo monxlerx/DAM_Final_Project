@@ -1,69 +1,95 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="72dp"
+    android:layout_marginVertical="20dp"
+    android:layout_marginLeft="40dp"
     android:layout_marginRight="@dimen/activity_horizontal_margin"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="Nombre"
-        android:textColor="?colorPrimary" />
+        android:layout_marginBottom="8dp"
+        android:drawableStart="@drawable/restaurant_24px"
+        android:drawablePadding="10dp"
+        android:text="@string/product_name"
+        android:textColor="@color/colorNavigationText"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        tools:text="300 20 1111" />
+        android:textColor="@color/colorMenuBar"
+        android:textSize="18sp"
+        tools:text="" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="Descripción"
-        android:textColor="?colorPrimary" />
+        android:layout_marginBottom="8dp"
+        android:drawableStart="@drawable/language_24px"
+        android:drawablePadding="10dp"
+        android:text="@string/product_description"
+        android:textColor="@color/colorNavigationText"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        tools:text="Abogado penalista" />
+        android:textColor="@color/colorMenuBar"
+        android:textSize="18sp"
+        tools:text="" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="Categoría"
-        android:textColor="?colorPrimary" />
+        android:layout_marginBottom="8dp"
+        android:drawableStart="@drawable/category_24px"
+        android:drawablePadding="10dp"
+        android:text="@string/product_category"
+        android:textColor="@color/colorNavigationText"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        tools:text="Hola corazones" />
+        android:textColor="@color/colorMenuBar"
+        android:textSize="18sp"
+        tools:text="" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="Precio"
-        android:textColor="?colorPrimary" />
+        android:layout_marginBottom="8dp"
+        android:drawableStart="@drawable/euro_symbol_24px"
+        android:drawablePadding="10dp"
+        android:text="@string/product_prize"
+        android:textColor="@color/colorNavigationText"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_prize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        tools:text="Hola corazones" />
+        android:textColor="@color/colorMenuBar"
+        android:textSize="18sp"
+        tools:text="" />
 
 </LinearLayout>

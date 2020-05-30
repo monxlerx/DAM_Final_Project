@@ -110,7 +110,6 @@
         <item name="android:layout_marginTop">10dp</item>
     </style>
 
-
     <!--About us-->
     <style name="about_us_bullet">
         <item name="android:layout_marginTop">20dp</item>

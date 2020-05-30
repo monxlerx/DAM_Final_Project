@@ -168,7 +168,7 @@ public class ProductsFragment extends Fragment {
                     fab_meat.startAnimation((fab_open));
                     fab_fish.startAnimation((fab_open));
                     fab_dessert.startAnimation((fab_open));
-                    fab_drink.startAnimation((fab_close));
+                    fab_drink.startAnimation((fab_open));
 
                     fab_main.startAnimation(fab_clock);
 

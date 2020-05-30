@@ -44,6 +44,14 @@
     <string name="text_menu_desserts">Desserts</string>
     <string name="text_menu_drinks">Drinks</string>
 
+    <!--Floating menu-->
+    <string name="drinks">Drinks</string>
+    <string name="fish">Fish</string>
+    <string name="meats">Meats</string>
+    <string name="desserts">Desserts</string>
+    <string name="salads">Salads</string>
+    <string name="starters">Starters</string>
+
     <!--About us fragment-->
     <string name="about_us_tittle1">From the heart of Asturias</string>
     <string name="about_us_subtitle1">Casa Juan rises in the middle of paradise</string>
@@ -65,6 +73,12 @@
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
     <string name="field_error">Insert a value</string>
     <string name="action_delete">Delete</string>
+
+    <!--Products Add/Edit-->
+    <string name="product_name">Product name</string>
+    <string name="product_description">Description in English</string>
+    <string name="product_category">Category</string>
+    <string name="product_prize">Prize</string>
 
     <!--Feedback fragment-->
     <string name="text_feedback_intro_1">How was your experience with the restaurant or the app?</string>
@@ -158,12 +172,5 @@
     <string name="first_para_9">The questions related to the Conditions of Use and Privacy Policy, as well as all those questions that lie and have a partial or complete relationship with the services provided through the application, are governed in each and every one of
         its ends by Spanish law, expressly renouncing the parties to the jurisdiction that corresponds to them, and submitting to the Courts and Tribunals of Oviedo
     </string>
-    <string name="title_activity_add_edit_product">AddEditProductActivity</string>
-    <string name="title_activity_prod">ProdActivity</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
 
 </resources>

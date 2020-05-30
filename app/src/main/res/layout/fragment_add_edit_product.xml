@@ -17,10 +17,11 @@
             android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre del producto"
+            android:hint="@string/product_name"
             android:inputType="textPersonName"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            tools:text="Alejandro Riascos" />
+            android:textSize="18sp"
+            tools:text="" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -33,9 +34,9 @@
             android:id="@+id/et_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descripcción en inglés"
+            android:hint="@string/product_description"
             android:inputType="text"
-            tools:text="300 200 4564" />
+            tools:text="" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -48,9 +49,9 @@
             android:id="@+id/et_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Categoría"
+            android:hint="@string/product_category"
             android:inputType="text"
-            tools:text="Abogado penalista" />
+            tools:text="" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -64,10 +65,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="top|start"
-            android:hint="Precio"
+            android:hint="@string/product_prize"
             android:imeOptions="actionDone"
-            android:inputType="text|textMultiLine"
-            tools:text="@string/lorem" />
+            android:inputType="text"
+            tools:text="" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </LinearLayout>

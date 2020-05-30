@@ -7,4 +7,5 @@
     <color name="colorToolbarText">#484848</color>
     <color name="colorNavigationText">#404355</color>
     <color name="colorMenuBar">#5D6275</color>
+    <color name="colorTextViewFloatButtonSecondary">#212121</color>
 </resources>

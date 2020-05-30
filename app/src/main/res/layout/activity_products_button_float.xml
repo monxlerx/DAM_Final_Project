@@ -14,25 +14,25 @@
         android:layout_marginEnd="98dp"
         android:layout_marginBottom="466dp"
         android:background="#212121"
+        app:backgroundTint="@color/colorNavigationText"
         android:padding="8dp"
-        android:text="Drinks"
+        android:text="@string/drinks"
         android:textColor="#ffffff"
         android:visibility="invisible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+
         android:id="@+id/fab6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="25dp"
+        android:layout_marginEnd="26dp"
         android:layout_marginBottom="446dp"
-        android:background="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:elevation="16dp"
-        android:focusable="true"
         android:visibility="invisible"
-        app:backgroundTint="#fff"
+        app:backgroundTint="@color/colorNavigationText"
         app:pressedTranslationZ="12dp"
         app:srcCompat="@drawable/drink_float" />
 
@@ -45,8 +45,9 @@
         android:layout_marginEnd="88dp"
         android:layout_marginBottom="396dp"
         android:background="#212121"
+        app:backgroundTint="@color/colorNavigationText"
         android:padding="8dp"
-        android:text="Desserts"
+        android:text="@string/desserts"
         android:textColor="#ffffff"
         android:visibility="invisible" />
 
@@ -63,7 +64,7 @@
         android:elevation="16dp"
         android:focusable="true"
         android:visibility="invisible"
-        app:backgroundTint="#ffffff"
+        app:backgroundTint="@color/colorNavigationText"
         app:pressedTranslationZ="12dp"
         app:srcCompat="@drawable/dessert_float" />
 
@@ -76,8 +77,9 @@
         android:layout_marginEnd="107dp"
         android:layout_marginBottom="326dp"
         android:background="#212121"
+        app:backgroundTint="@color/colorNavigationText"
         android:padding="8dp"
-        android:text="Fish"
+        android:text="@string/fish"
         android:textColor="#ffffff"
         android:visibility="invisible" />
 
@@ -94,7 +96,7 @@
         android:elevation="16dp"
         android:focusable="true"
         android:visibility="invisible"
-        app:backgroundTint="#ffffff"
+        app:backgroundTint="@color/colorNavigationText"
         app:pressedTranslationZ="12dp"
         app:srcCompat="@drawable/fish_float" />
 
@@ -108,8 +110,9 @@
         android:layout_marginEnd="94dp"
         android:layout_marginBottom="256dp"
         android:background="#212121"
+        app:backgroundTint="@color/colorNavigationText"
         android:padding="8dp"
-        android:text="Meats"
+        android:text="@string/meats"
         android:textColor="#ffffff"
         android:visibility="invisible" />
 
@@ -126,7 +129,7 @@
         android:elevation="16dp"
         android:focusable="true"
         android:visibility="invisible"
-        app:backgroundTint="#ffffff"
+        app:backgroundTint="@color/colorNavigationText"
         app:pressedTranslationZ="12dp"
         app:srcCompat="@drawable/steak_float" />
 
@@ -139,8 +142,9 @@
         android:layout_marginEnd="88dp"
         android:layout_marginBottom="186dp"
         android:background="#212121"
+        app:backgroundTint="@color/colorNavigationText"
         android:padding="8dp"
-        android:text="Starters"
+        android:text="@string/starters"
         android:textColor="#ffffff"
         android:visibility="invisible" />
 
@@ -157,7 +161,7 @@
         android:elevation="16dp"
         android:focusable="true"
         android:visibility="invisible"
-        app:backgroundTint="#ffffff"
+        app:backgroundTint="@color/colorNavigationText"
         app:pressedTranslationZ="12dp"
         app:srcCompat="@drawable/canapes_float" />
 
@@ -170,8 +174,9 @@
         android:layout_marginEnd="88dp"
         android:layout_marginBottom="116dp"
         android:background="#212121"
+        app:backgroundTint="@color/colorNavigationText"
         android:padding="8dp"
-        android:text="Salads"
+        android:text="@string/salads"
         android:textColor="#ffffff"
         android:visibility="invisible" />
 
@@ -189,7 +194,7 @@
         android:elevation="16dp"
         android:focusable="true"
         android:visibility="invisible"
-        app:backgroundTint="#ffffff"
+        app:backgroundTint="@color/colorNavigationText"
         app:pressedTranslationZ="12dp"
         app:srcCompat="@drawable/salads_float" />
 
@@ -206,7 +211,7 @@
         android:elevation="16dp"
         android:focusable="true"
         android:visibility="visible"
-        app:backgroundTint="#ffffff"
+        app:backgroundTint="@color/colorAccent"
         app:pressedTranslationZ="12dp"
         app:srcCompat="@drawable/list_float" />
 

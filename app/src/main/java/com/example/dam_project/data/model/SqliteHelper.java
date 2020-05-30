@@ -112,7 +112,6 @@ public class SqliteHelper extends SQLiteOpenHelper {
     }
 
 
-
     /*
      * TABLE PRODUCT
      *
@@ -294,7 +293,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
                 "Carnes", "28",  "solomillofoie.jpg"));
         mockProduct(sqLiteDatabase, new Product("Chuletón (1 Kg.) con patatas fritas y pimiento Padrón", "BBQ Ribeye Steak Loin Chop (1 Kg.) with chips & baby fried green peppers",
                 "Carnes",  "42",  "chuleton.jpg"));
-        mockProduct(sqLiteDatabase, new Product("Cachopo de Ternera Asturiana relleno de jamón y queso", "",
+        mockProduct(sqLiteDatabase, new Product("Cachopo de Ternera Asturiana relleno de jamón y queso", "Asturian beef cachopo stuffed with ham and cheese",
                 "Carnes",  "25",  "cachopoter.jpg"));
         mockProduct(sqLiteDatabase, new Product("Entrecot, patatas fritas y verduras de temporada ", "BBQ Sirloin Beef Entrecôte with chips & vegetables",
                 "Carnes", "26",  "entrecot.jpg"));

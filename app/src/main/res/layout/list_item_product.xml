@@ -19,6 +19,7 @@
         android:layout_marginLeft="72dp"
         android:text="New Text"
         android:textAppearance="?textAppearanceListItem"
+        android:textSize="18sp"
         tools:text="Carlos Giron" />
 
     <ImageView

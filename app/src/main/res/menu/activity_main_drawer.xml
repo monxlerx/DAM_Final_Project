@@ -14,7 +14,7 @@
             android:title="@string/menu_orders" />
         <item
             android:id="@+id/nav_promotions"
-            android:icon="@drawable/ic_card_giftcard_24px"
+            android:icon="@drawable/home_24px"
             android:title="@string/menu_promotions"/>
 
         <item

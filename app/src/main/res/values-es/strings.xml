@@ -10,7 +10,7 @@
     <string name="action_order">Pedido</string>
 
     <string name="menu_orders">Tus pedidos</string>
-    <string name="menu_promotions">Promociones</string>
+    <string name="menu_promotions">Nuestra casa</string>
     <string name="menu_help">Ayuda</string>
     <string name="menu_feedback">Danos tu opinión</string>
     <string name="menu_menuBar">Menu</string>
@@ -35,7 +35,7 @@
     <string name="title_activity_confirm">Has iniciado sesión,</string>
     <string name="log_out">Cerrar Sesión</string>
 
-    <!--Menu Bar Fragment-->
+    <!--Fragment Menu Bar-->
     <string name="text_menu_intro">¿Qué te apetece comer?</string>
     <string name="text_menu_salads">Ensaladas</string>
     <string name="text_menu_starters">Entrantes</string>
@@ -44,7 +44,7 @@
     <string name="text_menu_desserts">Postres</string>
     <string name="text_menu_drinks">Bebidas</string>
 
-    <!--About us fragment-->
+    <!--Fragment Sobre Nosotros-->
     <string name="about_us_tittle1">Desde el corazón de Asturias</string>
     <string name="about_us_subtitle1">En medio del paraíso surge Casa Juan</string>
     <string name="about_us_tittle2">Una cocina que inspira</string>
@@ -54,7 +54,7 @@
     <string name="about_us_tittle4">Contamos con el mejor equipo</string>
     <string name="about_us_subtittle4">Pasión y experiencia son nuestros ingredientes estrella</string>
 
-    <!--Products-->
+    <!--Productos-->
     <string name="hello_blank_fragment">Hola fragmento en blanco</string>
     <string name="title_activity_lawyer_detail">Detalle</string>
     <string name="large_text"> Es un texto de prueba
@@ -65,7 +65,21 @@
     <string name="field_error">Inserta un valor</string>
     <string name="action_delete">Borrar</string>
 
-    <!--Feedback fragment-->
+    <!--Producto Añadir/Editar-->
+    <string name="product_name">Nombre del producto</string>
+    <string name="product_description">Descripción en inglés</string>
+    <string name="product_category">Categoría</string>
+    <string name="product_prize">Precio</string>
+
+    <!--Menu flotante-->
+    <string name="drinks">Bebidas</string>
+    <string name="fish">Pescado</string>
+    <string name="meats">Carnes</string>
+    <string name="desserts">Postres</string>
+    <string name="salads">Ensaladas</string>
+    <string name="starters">Entrantes</string>
+
+    <!--Fragment feedback-->
     <string name="text_feedback_intro_1">¿Cuál ha sido tu experiencia con el restaurante o con la app?</string>
     <string name="text_feedback_intro_2">Por favor, dinos que es lo que te ha gustado y lo que no. Estamos encantados de oir tus comentarios</string>
     <string name="rbAwful">Horrible</string>
@@ -76,28 +90,28 @@
     <string name="etComment">Tu comentario aquí</string>
     <string name="btnFeedback">Envía tu comentario</string>
 
-    <!-- Preference Titles -->
+    <!-- Preferencias -->
     <string name="messages_header">Mensajes</string>
     <string name="sync_header">Sincronizar</string>
     <string name="language">Idioma</string>
     <string name="shared">Uso compartido</string>
 
-    <!-- Messages Preferences -->
+    <!-- Preferencias mensajes -->
     <string name="signature_title">Tu firma</string>
     <string name="reply_title">Respuesta de acción predeterminada</string>
 
-    <!-- Sync Preferences -->
+    <!-- Preferencias sinchronizar -->
     <string name="sync_title">Sincronizar emails periodicamente</string>
     <string name="attachment_title">Descargar archivos adjuntos entrantes</string>
     <string name="attachment_summary_on">Descarga automáticamente archivos adjuntos para correos electrónicos entrantes</string>
     <string name="attachment_summary_off">Solo descargue archivos adjuntos cuando se solicite manualmente</string>
 
-    <!--Language-->
+    <!--Idioma-->
     <string name="language_title">Idioma</string>
     <string name="lang_summary_on">Inglés</string>
     <string name="lang_summary_off">Español</string>
 
-    <!--Terms and conditions-->
+    <!--Términos y condiciones-->
     <string name="title">TÉRMINOS DE USO Y POLÍTICA DE PRIVACIDAD PARA APLICACIONES MÓVILES Y ACCESO DESDE DISPOSITIVOS MÓVILES
     </string>
     <string name="first_bullet">CONDICIONES GENERALES DE USO</string>

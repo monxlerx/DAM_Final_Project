@@ -22,7 +22,7 @@
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <!-- Imagen del detalle -->
+            <!--View detail -->
             <ImageView
                 android:id="@+id/iv_avatar"
                 android:layout_width="match_parent"
