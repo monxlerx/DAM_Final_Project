@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dam_project.loginregister.ConfirmLoginActivity;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     public UserSessionManager session;
     private AppBarConfiguration mAppBarConfiguration;
     private Button myButton;
+    public TextView textName;
+    public TextView textEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,14 +56,26 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
         //Check if user has been logged and get data from SharedPreferences
-        //User Session Manager
         session = new UserSessionManager(getApplicationContext());
-
         HashMap<String, String> user = session.getUserDetails();
         String name = user.get(UserSessionManager.KEY_NAME);
         String email = user.get(UserSessionManager.KEY_EMAIL);
 
-        Toast.makeText(this, "Bienvenido " + name , Toast.LENGTH_LONG).show();
+        //Add TextView name and TextView email to Navigation Drawer
+        textName = (TextView) findViewById(R.id.tvCustomerName);
+        textEmail = (TextView) findViewById(R.id.tvCustomerEmail);
+        View headerView = navigationView.getHeaderView(0);
+        textName = headerView.findViewById(R.id.tvCustomerName);
+        textEmail = headerView.findViewById(R.id.tvCustomerEmail);
+
+        if (name == null) {
+            textName.setText("Invitado");
+            textEmail.setText("");
+        } else {
+            textName.setText(name);
+            textEmail.setText(email);
+        }
+
 
         //Remove navigation bar to allow full screen view when the activity is onCreate
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
@@ -118,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //My tests
+
     public void moveToLogin(View v) {
         Intent i = new Intent(this, LogActivity.class);
         startActivity(i);
