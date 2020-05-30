@@ -69,7 +69,7 @@
     <string name="text_feedback_intro_1">¿Cuál ha sido tu experiencia con el restaurante o con la app?</string>
     <string name="text_feedback_intro_2">Por favor, dinos que es lo que te ha gustado y lo que no. Estamos encantados de oir tus comentarios</string>
     <string name="rbAwful">Horrible</string>
-    <string name="rbBad">Malo</string>
+    <string name="rbBad">Mala</string>
     <string name="rbNormal">Normal</string>
     <string name="rbGood">Bueno</string>
     <string name="rbSuperb">Magnífico</string>

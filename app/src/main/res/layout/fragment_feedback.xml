@@ -53,11 +53,11 @@
             android:text="@string/rbAwful" />
 
         <RadioButton
-            android:id="@+id/rbBad"
+            android:id="@+id/rbUnderNormal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/bad"
-            android:text="@string/rbBad" />
+            android:text="@string/rbBad"/>
 
         <RadioButton
             android:id="@+id/rbNormal"

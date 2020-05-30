@@ -181,7 +181,7 @@ public class LogActivity extends AppCompatActivity {
 
     //Back to the previous activity
     public void moveBack(View view) {
-        onBackPressed();
-    }
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);    }
 
 }
