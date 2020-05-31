@@ -10,6 +10,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +27,6 @@ import com.example.dam_project.data.model.SqliteHelper;
 import com.example.dam_project.products.ProductsActivity;
 import com.example.dam_project.products.ProductsFragment;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
-
 
 /**
  * View to show the product detail
@@ -45,7 +45,6 @@ public class ProductDetailFragment extends Fragment {
 
 
     private SqliteHelper mProductsDbHelper;
-
 
     public ProductDetailFragment() {
         // Required empty public constructor
@@ -67,6 +66,7 @@ public class ProductDetailFragment extends Fragment {
             mProductId = getArguments().getString(ARG_PRODUCT_ID);
         }
 
+        //Disable actions of these options that will only available in the future as a Administrator. Not showing to customers
         setHasOptionsMenu(true);
     }
 
@@ -92,6 +92,7 @@ public class ProductDetailFragment extends Fragment {
         new GetProductByIdTask().execute();
     }
 
+    //Add functionality to Edit and Delete in the Action Bar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -103,6 +104,15 @@ public class ProductDetailFragment extends Fragment {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    //Set the visibility to false for edit and delete icons.
+    //To restore edit and delete actions, just comment or delete the method onPrepareOptionsMenu
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        menu.findItem(R.id.action_edit).setVisible(false);
+        menu.findItem(R.id.action_delete).setVisible(false);
+        super.onPrepareOptionsMenu(menu);
     }
 
     @Override

@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import com.example.dam_project.R;
 import com.example.dam_project.products.ProductsActivity;
@@ -30,7 +31,6 @@ public class ProductDetailActivity extends AppCompatActivity {
                     .add(R.id.product_detail_container, fragment)
                     .commit();
         }
-
 
     }
 
