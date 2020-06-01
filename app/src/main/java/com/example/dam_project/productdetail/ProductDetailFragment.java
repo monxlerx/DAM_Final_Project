@@ -116,7 +116,7 @@ public class ProductDetailFragment extends Fragment {
                 String description = mDescription.getText().toString();
                 String category = mCategory.getText().toString();
                 String prize = mPrize.getText().toString();
-                String avatar = "";
+                String avatar = "chef.jpg";
                 email = email;
 
                 Cursor cursorCoincidence = mProductsDbHelper.getWishCoincidence(name, email);
@@ -127,7 +127,7 @@ public class ProductDetailFragment extends Fragment {
                     Wish wish = new Wish(name, description,category, prize, avatar, email);
                     mProductsDbHelper.saveWish(wish);
                     mButtonFav.setBackgroundResource(R.drawable.ic_favorite_red_24);
-                    Toast.makeText(getContext(), "Se ha añadido a favoritos " + avatar, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Se ha añadido a favoritos " , Toast.LENGTH_SHORT).show();
                 }
             }
         });
