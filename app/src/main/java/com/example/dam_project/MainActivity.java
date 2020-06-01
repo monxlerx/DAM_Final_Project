@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.dam_project.loginregister.ConfirmLoginActivity;
 import com.example.dam_project.loginregister.LogActivity;
 import com.example.dam_project.sessionmanagment.UserSessionManager;
+import com.example.dam_project.wishs.WishsActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -25,6 +26,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import java.util.HashMap;
+
+import static android.widget.Toast.LENGTH_SHORT;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -91,16 +94,26 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent i = null;
         switch (item.getItemId()) {
             case R.id.action_login:
-                    Intent intent;
                     if(session.isUserLoggedIn()) {
-                        intent = new Intent(this, ConfirmLoginActivity.class);
+                        i = new Intent(this, ConfirmLoginActivity.class);
                     } else {
-                        intent = new Intent(this, LogActivity.class);
+                        i = new Intent(this, LogActivity.class);
                     }
+                    startActivity(i);
+                    finish();
+                    return true;
 
-                    startActivity(intent);
+            case R.id.action_favourites:
+                    if(session.isUserLoggedIn()) {
+                        i = new Intent(this, WishsActivity.class);
+                    } else {
+                        i = new Intent(this, MainActivity.class);
+                        Toast.makeText(getApplicationContext(), "Debes iniciar sesión para ver tus favoritos", Toast.LENGTH_LONG).show();
+                    }
+                    startActivity(i);
                     finish();
                     return true;
 
@@ -110,6 +123,8 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
 
     @Override
     public boolean onSupportNavigateUp() {

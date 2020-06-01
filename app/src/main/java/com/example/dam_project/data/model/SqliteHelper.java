@@ -160,6 +160,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
         //Create Table when oncreate gets called
         sqLiteDatabase.execSQL(SQL_TABLE_USERS);
         sqLiteDatabase.execSQL(SQL_TABLE_PRODUCTS);
+        sqLiteDatabase.execSQL(SQL_TABLE_WISHS);
         mockData(sqLiteDatabase);
     }
 
@@ -168,6 +169,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
         //drop table to create new one if database version updated
         sqLiteDatabase.execSQL(" DROP TABLE IF EXISTS " + TABLE_USERS);
         sqLiteDatabase.execSQL(" DROP TABLE IF EXISTS " + TABLE_PRODUCTS);
+        sqLiteDatabase.execSQL(" DROP TABLE IF EXISTS " + TABLE_WISHS);
 
     }
 
@@ -231,6 +233,8 @@ public class SqliteHelper extends SQLiteOpenHelper {
                 ProductContract.ProductEntry.NAME+" ASC");
         return c;
     }
+
+
 
     public int deleteProduct(String productId) {
         return getWritableDatabase().delete(
@@ -349,6 +353,157 @@ public class SqliteHelper extends SQLiteOpenHelper {
                 "Bebidas", "3.5",  "pedroximenez.jpg"));
         mockProduct(sqLiteDatabase, new Product("Champagne Billecart-Salmon Brut Rosé", "Billecart-Salmon Brut Rosé Champagne",
                 "Bebidas", "85",  "champagnebille.jpg"));
+
+    }
+
+
+    /*
+     * TABLE WISH
+     *
+     * */
+
+    //TABLE NAME
+    public static final String TABLE_WISHS = "wishs";
+
+    //TABLE WISHS COLUMNS
+    //ID COLUMN @primaryKey
+    public static final String WISH_ID = "wish_id";
+
+    //COLUMN name
+    public static final String WISH_NAME = "wish_name";
+
+    //COLUMN description
+    public static final String WISH_DESCRIPTION = "wish_description";
+
+    //COLUMN category
+    public static final String WISH_CATEGORY = "wish_category";
+
+    //COLUMN float
+    public static final String WISH_PRIZE = "wish_prize";
+
+    //COLUMN avatar
+    public static final String WISH_AVATAR_URI = "wish_avatarUri";
+
+    //COLUMN email
+    public static final String WISH_EMAIL = "wish_email";
+
+
+    public static final String SQL_TABLE_WISHS = "CREATE TABLE " + WishContract.WishEntry.TABLE_NAME + " ("
+            + WishContract.WishEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + WishContract.WishEntry.WISH_ID + " TEXT NOT NULL,"
+            + WishContract.WishEntry.WISH_NAME + " TEXT NOT NULL,"
+            + WishContract.WishEntry.WISH_DESCRIPTION + " TEXT NOT NULL,"
+            + WishContract.WishEntry.WISH_CATEGORY + " TEXT NOT NULL,"
+            + WishContract.WishEntry.WISH_PRIZE + " TEXT NOT NULL,"
+            + WishContract.WishEntry.WISH_AVATAR_URI + " TEXT,"
+            + WishContract.WishEntry.WISH_EMAIL + " TEXT,"
+            + "UNIQUE (" + WishContract.WishEntry.WISH_ID + "))";
+
+
+    /* METHODS
+     * TABLE WISH
+     *
+     * */
+
+    public long mockWish(SQLiteDatabase db, Wish wish) {
+        return db.insert(
+                WishContract.WishEntry.TABLE_NAME,
+                null,
+                wish.toContentValues());
+    }
+
+
+
+    public long saveWish(Wish wish) {
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+
+        return sqLiteDatabase.insert(
+                WishContract.WishEntry.TABLE_NAME,
+                null,
+                wish.toContentValues());
+
+    }
+
+    public Cursor getAllWishs() {
+        return getReadableDatabase()
+                .query(
+                        WishContract.WishEntry.TABLE_NAME,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null);
+    }
+
+    public Cursor getWishById(String wishId) {
+        Cursor c = getReadableDatabase().query(
+                WishContract.WishEntry.TABLE_NAME,
+                null,
+                WishContract.WishEntry.WISH_ID + " LIKE ?",
+                new String[]{wishId},
+                null,
+                null,
+                WishContract.WishEntry.WISH_NAME+" ASC");
+        return c;
+    }
+
+    public Cursor getWishByName(String name) {
+        Cursor c = getReadableDatabase().query(
+                WishContract.WishEntry.TABLE_NAME,
+                null,
+                WishContract.WishEntry.WISH_NAME + " LIKE ?",
+                new String[]{name},
+                null,
+                null,
+                WishContract.WishEntry.WISH_NAME+" ASC");
+        return c;
+    }
+
+    //Check if there is a cursor. If it returns >0 , the dish has been added to favourites
+    public Cursor getWishCoincidence(String name, String email) {
+        Cursor c = getReadableDatabase().query(
+                WishContract.WishEntry.TABLE_NAME,
+                null,
+                WishContract.WishEntry.WISH_NAME+ " LIKE ? AND "+ WishContract.WishEntry.WISH_EMAIL+ " LIKE ?",
+                new String[]{name, email},
+                null,
+                null,
+                WishContract.WishEntry.WISH_NAME+" ASC");
+        return c;
+    }
+
+    //Filter to get products by Category
+    public Cursor getWishByEmail(String email) {
+        Cursor c = getReadableDatabase().query(
+                WishContract.WishEntry.TABLE_NAME,
+                null,
+                WishContract.WishEntry.WISH_EMAIL+ " LIKE ?",
+                new String[]{email},
+                null,
+                null,
+                WishContract.WishEntry.WISH_NAME+" ASC");
+        return c;
+    }
+
+    public int deleteWish(String wishId) {
+        return getWritableDatabase().delete(
+                WishContract.WishEntry.TABLE_NAME,
+                WishContract.WishEntry.WISH_ID + " LIKE ?",
+                new String[]{wishId});
+    }
+
+    public int updateWish(Wish wish, String wishId) {
+        return getWritableDatabase().update(
+                WishContract.WishEntry.TABLE_NAME,
+                wish.toContentValues(),
+                WishContract.WishEntry.WISH_ID + " LIKE ?",
+                new String[]{wishId}
+        );
+    }
+
+    //WISH
+    private void mockWishData(SQLiteDatabase sqLiteDatabase) {
 
     }
 

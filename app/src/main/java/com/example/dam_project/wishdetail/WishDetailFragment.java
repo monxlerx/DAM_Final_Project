@@ -1,16 +1,14 @@
-package com.example.dam_project.productdetail;
+package com.example.dam_project.wishdetail;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,31 +20,30 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-
 import com.example.dam_project.R;
 import com.example.dam_project.addeditproduct.AddEditProductActivity;
-import com.example.dam_project.addeditproduct.AddEditProductFragment;
 import com.example.dam_project.data.model.Product;
 import com.example.dam_project.data.model.SqliteHelper;
 import com.example.dam_project.data.model.Wish;
-import com.example.dam_project.data.model.WishContract;
+import com.example.dam_project.productdetail.ProductDetailFragment;
 import com.example.dam_project.products.ProductsActivity;
 import com.example.dam_project.products.ProductsFragment;
 import com.example.dam_project.sessionmanagment.UserSessionManager;
+import com.example.dam_project.wishs.WishsActivity;
+import com.example.dam_project.wishs.WishsFragment;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.HashMap;
 
-import static com.example.dam_project.data.model.SqliteHelper.NAME;
-import static com.example.dam_project.data.model.SqliteHelper.TABLE_PRODUCTS;
-
 /**
- * View to show the product detail
+ * View to show the wish detail
  */
-public class ProductDetailFragment extends Fragment {
-    private static final String ARG_PRODUCT_ID = "productId";
 
-    private String mProductId;
+public class WishDetailFragment extends Fragment {
+    private static final String ARG_WISH_ID = "wishId";
+
+    private String mWishId;
 
     private CollapsingToolbarLayout mCollapsingView;
     private ImageView mAvatar;
@@ -54,21 +51,23 @@ public class ProductDetailFragment extends Fragment {
     private TextView mDescription;
     private TextView mCategory;
     private TextView mPrize;
-    UserSessionManager session;
-    private Button mButtonFav;
+    private FloatingActionButton fab_main;
     String email;
+    Button btnFav;
+
+    UserSessionManager session;
 
 
-    private SqliteHelper mProductsDbHelper;
+    private SqliteHelper mWishsDbHelper;
 
-    public ProductDetailFragment() {
+    public WishDetailFragment() {
         // Required empty public constructor
     }
 
-    public static ProductDetailFragment newInstance(String productId) {
-        ProductDetailFragment fragment = new ProductDetailFragment();
+    public static WishDetailFragment newInstance(String wishId) {
+        WishDetailFragment fragment = new WishDetailFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PRODUCT_ID, productId);
+        args.putString(ARG_WISH_ID, wishId);
         fragment.setArguments(args);
         return fragment;
     }
@@ -78,7 +77,7 @@ public class ProductDetailFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         if (getArguments() != null) {
-            mProductId = getArguments().getString(ARG_PRODUCT_ID);
+            mWishId = getArguments().getString(ARG_WISH_ID);
         }
 
         //Disable actions of these options that will only available in the future as a Administrator. Not showing to customers
@@ -88,56 +87,40 @@ public class ProductDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_product_detail, container, false);
+        View root = inflater.inflate(R.layout.fragment_wish_detail, container, false);
         mCollapsingView = (CollapsingToolbarLayout) getActivity().findViewById(R.id.toolbar_layout);
         mAvatar = (ImageView) getActivity().findViewById(R.id.iv_avatar);
         mName = (TextView) root.findViewById(R.id.tv_name);
         mDescription = (TextView) root.findViewById(R.id.tv_description);
         mCategory = (TextView) root.findViewById(R.id.tv_category);
         mPrize = (TextView) root.findViewById(R.id.tv_prize);
-        mButtonFav = (Button) root.findViewById(R.id.favBtn);
 
-        mProductsDbHelper = new SqliteHelper(getActivity());
+        mWishsDbHelper = new SqliteHelper(getActivity());
+        fab_main = (FloatingActionButton) root.findViewById(R.id.fab);
 
-        //Get user
-        session = new UserSessionManager(getActivity());
+        //Get Email details
+        session = new UserSessionManager(getContext());
         HashMap<String, String> user = session.getUserDetails();
         email = user.get(UserSessionManager.KEY_EMAIL);
 
-        loadProduct();
-
-        Cursor cursor = mProductsDbHelper.getWishByName(mName.getText().toString());
-
-
-        mButtonFav.setOnClickListener(new View.OnClickListener() {
+        //Add button functionality and remove items from the list view
+        btnFav = (Button) root.findViewById(R.id.favWishBtn);
+        btnFav.setBackgroundResource(R.drawable.ic_favorite_red_24);
+        btnFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = mName.getText().toString();
-                String description = mDescription.getText().toString();
-                String category = mCategory.getText().toString();
-                String prize = mPrize.getText().toString();
-                String avatar = "";
-                email = email;
-
-                Cursor cursorCoincidence = mProductsDbHelper.getWishCoincidence(name, email);
-
-                if(cursorCoincidence.getCount() > 0) {
-                    Toast.makeText(getActivity(), "Ya estaba añadido a favoritos", Toast.LENGTH_SHORT).show();
-                } else {
-                    Wish wish = new Wish(name, description,category, prize, avatar, email);
-                    mProductsDbHelper.saveWish(wish);
-                    mButtonFav.setBackgroundResource(R.drawable.ic_favorite_red_24);
-                    Toast.makeText(getContext(), "Se ha añadido a favoritos " + avatar, Toast.LENGTH_SHORT).show();
-                }
+                new WishDetailFragment.DeleteWishTask().execute();
+                Toast.makeText(getActivity(), "Se ha eliminado de tus favoritos", Toast.LENGTH_SHORT).show();
             }
         });
 
+        loadWishs();
 
         return root;
     }
 
-    private void loadProduct() {
-        new GetProductByIdTask().execute();
+    private void loadWishs() {
+        new GetWishByIdTask().execute();
     }
 
     //Add functionality to Edit and Delete in the Action Bar
@@ -145,10 +128,10 @@ public class ProductDetailFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_edit:
-                showEditScreen();
+                //showEditScreen();
                 break;
             case R.id.action_delete:
-                new DeleteProductTask().execute();
+                //new WishDetailFragment.DeleteWishTask().execute();
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -165,7 +148,7 @@ public class ProductDetailFragment extends Fragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == ProductsFragment.REQUEST_UPDATE_DELETE_PRODUCT) {
+        if (requestCode == WishsFragment.REQUEST_UPDATE_DELETE_WISH) {
             if (resultCode == Activity.RESULT_OK) {
                 getActivity().setResult(Activity.RESULT_OK);
                 getActivity().finish();
@@ -173,25 +156,26 @@ public class ProductDetailFragment extends Fragment {
         }
     }
 
-    private void showProduct(Product product) {
-        mCollapsingView.setTitle(product.getName());
+    private void showWish(Wish wish) {
+        mCollapsingView.setTitle(wish.getWishName());
         Glide.with(getContext())
-                .load(Uri.parse("file:///android_asset/" + product.getAvatarUri()))
+                .load(Uri.parse("file:///android_asset/" + wish.getWishAvatarUri()))
                 .centerCrop()
                 .into(mAvatar);
-        mName.setText(product.getName());
-        mDescription.setText(product.getDescription());
-        mCategory.setText(product.getCategory());
-        mPrize.setText(product.getPrize());
+        mName.setText(wish.getWishName());
+        mDescription.setText(wish.getWishDescription());
+        mCategory.setText(wish.getWishCategory());
+        mPrize.setText(wish.getWishPrize());
     }
 
-    private void showEditScreen() {
+
+     private void showEditScreen() {
         Intent intent = new Intent(getActivity(), AddEditProductActivity.class);
-        intent.putExtra(ProductsActivity.EXTRA_PRODUCT_ID, mProductId);
-        startActivityForResult(intent, ProductsFragment.REQUEST_UPDATE_DELETE_PRODUCT);
+        intent.putExtra(WishsActivity.EXTRA_WISH_ID, mWishId);
+        startActivityForResult(intent, WishsFragment.REQUEST_UPDATE_DELETE_WISH);
     }
 
-    private void showProductScreen(boolean requery) {
+    private void showWishScreen(boolean requery) {
         if (!requery) {
             showDeleteError();
         }
@@ -206,20 +190,20 @@ public class ProductDetailFragment extends Fragment {
 
     private void showDeleteError() {
         Toast.makeText(getActivity(),
-                "Error al eliminar producto", Toast.LENGTH_SHORT).show();
+                "Error al eliminar favorito", Toast.LENGTH_SHORT).show();
     }
 
-    private class GetProductByIdTask extends AsyncTask<Void, Void, Cursor> {
+    private class GetWishByIdTask extends AsyncTask<Void, Void, Cursor> {
 
         @Override
         protected Cursor doInBackground(Void... voids) {
-            return mProductsDbHelper.getProductById(mProductId);
+            return mWishsDbHelper.getWishById(mWishId);
         }
 
         @Override
         protected void onPostExecute(Cursor cursor) {
             if (cursor != null && cursor.moveToLast()) {
-                showProduct(new Product(cursor));
+                showWish(new Wish(cursor));
             } else {
                 showLoadError();
             }
@@ -227,18 +211,17 @@ public class ProductDetailFragment extends Fragment {
 
     }
 
-    private class DeleteProductTask extends AsyncTask<Void, Void, Integer> {
+    private class DeleteWishTask extends AsyncTask<Void, Void, Integer> {
 
         @Override
         protected Integer doInBackground(Void... voids) {
-            return mProductsDbHelper.deleteProduct(mProductId);
+            return mWishsDbHelper.deleteWish(mWishId);
         }
 
         @Override
         protected void onPostExecute(Integer integer) {
-            showProductScreen(integer > 0);
+            showWishScreen(integer > 0);
         }
 
     }
-
 }

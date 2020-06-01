@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#03A9F4"
     android:fitsSystemWindows="true"
-    tools:context=".productdetail.ProductDetailActivity">
+    tools:context=".wishdetail.WishDetailActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -41,6 +40,6 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_product_detail" />
+    <include layout="@layout/content_wish_detail" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

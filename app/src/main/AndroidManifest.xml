@@ -4,7 +4,7 @@
     package="com.example.dam_project">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature android:name="android.hardware.type.watch" />
 
@@ -16,7 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="LockedOrientationActivity">
-        <activity android:name=".loginregister.ConfirmLoginActivity"></activity>
+        <activity android:name=".wishdetail.WishDetailActivity"></activity>
+        <activity android:name=".wishs.WishsActivity" />
+        <activity android:name=".loginregister.ConfirmLoginActivity" />
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
