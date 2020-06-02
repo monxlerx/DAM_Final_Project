@@ -1,7 +1,9 @@
 package com.example.dam_project.productdetail;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
@@ -43,6 +45,7 @@ import static com.example.dam_project.data.model.SqliteHelper.TABLE_PRODUCTS;
 /**
  * View to show the product detail
  */
+
 public class ProductDetailFragment extends Fragment {
     private static final String ARG_PRODUCT_ID = "productId";
 
@@ -84,7 +87,6 @@ public class ProductDetailFragment extends Fragment {
 
         //Disable actions of these options that will only available in the future as a Administrator. Not showing to customers
         setHasOptionsMenu(true);
-
     }
 
     @Override
