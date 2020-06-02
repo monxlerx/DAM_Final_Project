@@ -1,16 +1,27 @@
-package com.example.dam_project;
+package com.example.dam_project.ui.help;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
-public class TermsConditions extends AppCompatActivity {
+import com.example.dam_project.R;
+
+public class TermsConditionsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terms_conditions);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        if(getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     //Allow to hide the navigation bar
@@ -28,8 +39,13 @@ public class TermsConditions extends AppCompatActivity {
         }
     }
 
-    //Back to the previous activity
-    public void moveBack(View view) {
-        onBackPressed();
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //Handle arrow click
+        if(item.getItemId() == android.R.id.home) {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

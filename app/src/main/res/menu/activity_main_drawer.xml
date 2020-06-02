@@ -9,10 +9,6 @@
             android:icon="@drawable/ic_chrome_reader_mode_24px"
             android:title="@string/menu_menuBar" />
         <item
-            android:id="@+id/nav_orders"
-            android:icon="@drawable/ic_insert_drive_file_24px"
-            android:title="@string/menu_orders" />
-        <item
             android:id="@+id/nav_promotions"
             android:icon="@drawable/home_24px"
             android:title="@string/menu_promotions"/>

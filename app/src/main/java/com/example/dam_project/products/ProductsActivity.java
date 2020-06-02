@@ -22,7 +22,6 @@ public class ProductsActivity extends AppCompatActivity {
         //Create arrow back to the toolbar
         if(getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
         //Retrieve Category key from the previous fragment

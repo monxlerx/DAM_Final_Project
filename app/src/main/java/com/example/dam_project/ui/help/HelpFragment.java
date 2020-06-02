@@ -8,26 +8,21 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.dam_project.MainActivity;
 import com.example.dam_project.R;
-import com.example.dam_project.SettingsActivity;
-import com.example.dam_project.TermsConditions;
-import com.example.dam_project.ui.feedback.FeedbackFragment;
 
 public class HelpFragment extends Fragment {
 
     private HelpViewModel helpViewModel;
     ListView lv;
     ArrayAdapter<String> adapter;
-    String[] names = {"Hola", "Terms and conditions", "Settings"};
+    String[] names = {"Preguntas frecuentes", "Compartir", "Términos y condiciones", "Configuración"};
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -50,15 +45,19 @@ public class HelpFragment extends Fragment {
                         break;
 
                     case 1:
-                        i = new Intent(getActivity(), TermsConditions.class);
+                        i = new Intent(getActivity(), ShareApplicationActivity.class);
                         startActivity(i);
                         break;
 
                     case 2:
-                        i = new Intent(getActivity(), SettingsActivity.class);
+                        i = new Intent(getActivity(), TermsConditionsActivity.class);
                         startActivity(i);
                         break;
 
+                    case 3:
+                        i = new Intent(getActivity(), SettingsActivity.class);
+                        startActivity(i);
+                        break;
                 }
             }
         });

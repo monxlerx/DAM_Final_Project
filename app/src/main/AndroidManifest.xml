@@ -6,8 +6,6 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-feature android:name="android.hardware.type.watch" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,7 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="LockedOrientationActivity">
-        <activity android:name=".wishdetail.WishDetailActivity"></activity>
+        <activity android:name=".ui.help.FaqsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.help.ShareApplicationActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".wishdetail.WishDetailActivity" />
         <activity android:name=".wishs.WishsActivity" />
         <activity android:name=".loginregister.ConfirmLoginActivity" />
         <!--
@@ -32,9 +35,11 @@
         <activity android:name=".addeditproduct.AddEditProductActivity" />
         <activity android:name=".loginregister.RegisterActivity" />
         <activity android:name=".loginregister.LogActivity" />
-        <activity android:name=".TermsConditions" />
+        <activity android:name=".ui.help.TermsConditionsActivity"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".SettingsActivity"
+            android:name=".ui.help.SettingsActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_settings" />
         <activity
             android:name=".MainActivity"

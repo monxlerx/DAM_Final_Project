@@ -119,6 +119,7 @@ public class ProductDetailFragment extends Fragment {
                 String avatar = "chef.jpg";
                 email = email;
 
+                //Check if the query has return some cursor. If the result is > 0, it is because there is a coincidence in the database.
                 Cursor cursorCoincidence = mProductsDbHelper.getWishCoincidence(name, email);
 
                 if(cursorCoincidence.getCount() > 0) {

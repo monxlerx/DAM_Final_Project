@@ -1,4 +1,4 @@
-package com.example.dam_project;
+package com.example.dam_project.ui.help;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -12,6 +12,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceFragmentCompat;
 
+import com.example.dam_project.R;
 import com.example.dam_project.data.model.User;
 
 public class SettingsActivity extends AppCompatActivity {

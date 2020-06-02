@@ -4,16 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.help.HelpFragment">
-
-    <ListView
-        android:id="@+id/help_list"
-        android:choiceMode="singleChoice"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" >
-
-    </ListView>
+    tools:context=".ui.help.FaqsActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

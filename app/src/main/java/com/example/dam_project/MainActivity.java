@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_menuBar, R.id.nav_orders, R.id.nav_promotions, R.id.nav_help, R.id.nav_feedback)
+                R.id.nav_menuBar, R.id.nav_promotions, R.id.nav_help, R.id.nav_feedback)
                 .setDrawerLayout(drawer)
                 .build();
 
@@ -82,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Remove navigation bar to allow full screen view when the activity is onCreate
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-
     }
 
     @Override
@@ -116,15 +115,10 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(i);
                     finish();
                     return true;
-
-                //TODO Hacer el caso 2 para que vaya a el carrito (Mirar si es con un fragment o con una actividad)
-
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
 
     @Override
     public boolean onSupportNavigateUp() {
@@ -147,7 +141,6 @@ public class MainActivity extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
     }
-
 
     public void moveToLogin(View v) {
         Intent i = new Intent(this, LogActivity.class);

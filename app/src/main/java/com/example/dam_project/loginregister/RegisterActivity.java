@@ -32,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
     //Declaration Button
     Button buttonRegister;
 
-    //Declaration com.example.dam_project.SettingsActivity.SqliteHelper
+    //Declaration com.example.dam_project.ui.help.SettingsActivity.SqliteHelper
     SqliteHelper sqliteHelper;
 
     @Override
