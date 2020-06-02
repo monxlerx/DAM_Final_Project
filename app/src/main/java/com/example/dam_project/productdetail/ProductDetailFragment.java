@@ -57,6 +57,7 @@ public class ProductDetailFragment extends Fragment {
     UserSessionManager session;
     private Button mButtonFav;
     String email;
+    String name;
 
 
     private SqliteHelper mProductsDbHelper;
@@ -83,6 +84,7 @@ public class ProductDetailFragment extends Fragment {
 
         //Disable actions of these options that will only available in the future as a Administrator. Not showing to customers
         setHasOptionsMenu(true);
+
     }
 
     @Override
@@ -108,31 +110,32 @@ public class ProductDetailFragment extends Fragment {
 
         Cursor cursor = mProductsDbHelper.getWishByName(mName.getText().toString());
 
-
         mButtonFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = mName.getText().toString();
+                name = mName.getText().toString();
                 String description = mDescription.getText().toString();
                 String category = mCategory.getText().toString();
                 String prize = mPrize.getText().toString();
                 String avatar = "chef.jpg";
                 email = email;
 
-                //Check if the query has return some cursor. If the result is > 0, it is because there is a coincidence in the database.
-                Cursor cursorCoincidence = mProductsDbHelper.getWishCoincidence(name, email);
-
-                if(cursorCoincidence.getCount() > 0) {
-                    Toast.makeText(getActivity(), "Ya estaba añadido a favoritos", Toast.LENGTH_SHORT).show();
+                if(session.isUserLoggedIn()) {
+                    //Check if the query has return some cursor. If the result is > 0, it is because there is a coincidence in the database.
+                    Cursor cursorCoincidence = mProductsDbHelper.getWishCoincidence(name, email);
+                    if(cursorCoincidence.getCount() > 0) {
+                        Toast.makeText(getActivity(), "Ya estaba añadido a favoritos", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Wish wish = new Wish(name, description,category, prize, avatar, email);
+                        mProductsDbHelper.saveWish(wish);
+                        mButtonFav.setBackgroundResource(R.drawable.ic_favorite_red_24);
+                        Toast.makeText(getContext(), "Se ha añadido a favoritos " , Toast.LENGTH_SHORT).show();
+                    }
                 } else {
-                    Wish wish = new Wish(name, description,category, prize, avatar, email);
-                    mProductsDbHelper.saveWish(wish);
-                    mButtonFav.setBackgroundResource(R.drawable.ic_favorite_red_24);
-                    Toast.makeText(getContext(), "Se ha añadido a favoritos " , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Debes iniciar sesión para guardar tus favoritos" , Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
 
         return root;
     }
