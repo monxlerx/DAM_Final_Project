@@ -40,7 +40,7 @@ public class HelpFragment extends Fragment {
                 Intent i;
                 switch (pos) {
                     case 0:
-                        i = new Intent(getContext(), MainActivity.class);
+                        i = new Intent(getContext(), FaqsActivity.class);
                         startActivity(i);
                         break;
 
