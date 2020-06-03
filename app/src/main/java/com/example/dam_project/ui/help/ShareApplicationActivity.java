@@ -5,9 +5,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.preference.PreferenceManager;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -45,56 +47,65 @@ public class ShareApplicationActivity extends AppCompatActivity {
         adapterSharing = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, appSharing);
         listSharing.setAdapter(adapterSharing);
 
+        //Read preference value in the share key (root preferences) to grant access to different applications
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        final boolean isChecked = sharedPreferences.getBoolean("share", false);
+
         //Listener to create intents for each sharing option in the view
         listSharing.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent sendIntent;
-                switch (position) {
-                    case 0:
-                        //Instagram
-                        sendIntent = new Intent();
-                        sendIntent.setAction(Intent.ACTION_SEND);
-                        sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
-                        sendIntent.setType("text/plain");
-                        sendIntent.setPackage("com.instagram.android");
-                        startActivity(sendIntent);
-                        break;
+                if (isChecked) {
+                    Intent sendIntent;
+                    switch (position) {
+                        case 0:
+                            //Instagram
+                            sendIntent = new Intent();
+                            sendIntent.setAction(Intent.ACTION_SEND);
+                            sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
+                            sendIntent.setType("text/plain");
+                            sendIntent.setPackage("com.instagram.android");
+                            startActivity(sendIntent);
+                            break;
 
-                    case 1:
-                        //Gmail
-                        sendIntent = new Intent();
-                        sendIntent.setAction(Intent.ACTION_SEND);
-                        sendIntent.setType("message/rfc822");
-                        sendIntent.setPackage("com.google.android.gm");
-                        sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Aplicación Casa Juan");
-                        sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
-                        sendIntent.setType("text/plain");
-                        startActivity(sendIntent);
-                        break;
+                        case 1:
+                            //Gmail
+                            sendIntent = new Intent();
+                            sendIntent.setAction(Intent.ACTION_SEND);
+                            sendIntent.setType("message/rfc822");
+                            sendIntent.setPackage("com.google.android.gm");
+                            sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Aplicación Casa Juan");
+                            sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
+                            sendIntent.setType("text/plain");
+                            startActivity(sendIntent);
+                            break;
 
-                    case 2:
-                        //WhatsApp
-                        sendIntent = new Intent();
-                        sendIntent.setAction(Intent.ACTION_SEND);
-                        sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
-                        sendIntent.setType("text/plain");
-                        sendIntent.setPackage("com.whatsapp");
-                        startActivity(sendIntent);
-                        break;
+                        case 2:
+                            //WhatsApp
+                            sendIntent = new Intent();
+                            sendIntent.setAction(Intent.ACTION_SEND);
+                            sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
+                            sendIntent.setType("text/plain");
+                            sendIntent.setPackage("com.whatsapp");
+                            startActivity(sendIntent);
+                            break;
 
-                    case 3:
-                        //Others (Deploy Android  Sharesheet)
-                       sendIntent = new Intent();
-                       sendIntent.setAction(Intent.ACTION_SEND);
-                       sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
-                       sendIntent.setType("text/plain");
-                       Intent shareIntent = Intent.createChooser(sendIntent, null);
-                       startActivity(shareIntent);
-                        break;
+                        case 3:
+                            //Others (Deploy Android  Sharesheet)
+                            sendIntent = new Intent();
+                            sendIntent.setAction(Intent.ACTION_SEND);
+                            sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
+                            sendIntent.setType("text/plain");
+                            Intent shareIntent = Intent.createChooser(sendIntent, null);
+                            startActivity(shareIntent);
+                            break;
+                    }
+                } else {
+                    Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.share_app_message), Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
     }
 
     @Override

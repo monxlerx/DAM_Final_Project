@@ -139,6 +139,8 @@
     <string name="error_deleting_favourites">Error deleting a favourite product</string>
     <string name="save_product_ok">Product saved correctly</string>
     <string name="check_login_favourite">You must be logged in to see your favorites</string>
+    <string name="share_app_message">You must modify your preferences in Settings to share the application</string>
+
 
     <!--Terms and conditions-->
     <string name="title">TERMS OF USE AND PRIVACY POLICY FOR MOBILE APPLICATIONS AND ACCESS FROM MOBILE DEVICES
