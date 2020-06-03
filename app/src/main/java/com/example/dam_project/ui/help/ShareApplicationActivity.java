@@ -62,7 +62,7 @@ public class ShareApplicationActivity extends AppCompatActivity {
                             //Instagram
                             sendIntent = new Intent();
                             sendIntent.setAction(Intent.ACTION_SEND);
-                            sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
+                            sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1BcR-0oG-QI1viaH95FXy06QH_aaUmo4e/view?usp=sharing");
                             sendIntent.setType("text/plain");
                             sendIntent.setPackage("com.instagram.android");
                             startActivity(sendIntent);
@@ -75,7 +75,7 @@ public class ShareApplicationActivity extends AppCompatActivity {
                             sendIntent.setType("message/rfc822");
                             sendIntent.setPackage("com.google.android.gm");
                             sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Aplicación Casa Juan");
-                            sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
+                            sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1BcR-0oG-QI1viaH95FXy06QH_aaUmo4e/view?usp=sharing");
                             sendIntent.setType("text/plain");
                             startActivity(sendIntent);
                             break;
@@ -84,7 +84,7 @@ public class ShareApplicationActivity extends AppCompatActivity {
                             //WhatsApp
                             sendIntent = new Intent();
                             sendIntent.setAction(Intent.ACTION_SEND);
-                            sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
+                            sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1BcR-0oG-QI1viaH95FXy06QH_aaUmo4e/view?usp=sharing");
                             sendIntent.setType("text/plain");
                             sendIntent.setPackage("com.whatsapp");
                             startActivity(sendIntent);
@@ -94,7 +94,7 @@ public class ShareApplicationActivity extends AppCompatActivity {
                             //Others (Deploy Android  Sharesheet)
                             sendIntent = new Intent();
                             sendIntent.setAction(Intent.ACTION_SEND);
-                            sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
+                            sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1BcR-0oG-QI1viaH95FXy06QH_aaUmo4e/view?usp=sharing");
                             sendIntent.setType("text/plain");
                             Intent shareIntent = Intent.createChooser(sendIntent, null);
                             startActivity(shareIntent);
@@ -105,7 +105,6 @@ public class ShareApplicationActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     @Override
@@ -117,5 +116,4 @@ public class ShareApplicationActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 }

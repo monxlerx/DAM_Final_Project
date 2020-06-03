@@ -1,18 +1,28 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center|center_horizontal|center_vertical"
     tools:context=".wishs.WishsFragment">
 
     <ListView
         android:id="@+id/wishs_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:dividerHeight="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-
         android:divider="@null"
+        android:dividerHeight="10dp"
         tools:listitem="@layout/list_item_wish" />
+
+    <TextView
+        android:id="@+id/tx_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="@string/empty_favourite"
+        android:textColor="@color/colorMenuBar"
+        android:textSize="24sp" />
 
 </FrameLayout>

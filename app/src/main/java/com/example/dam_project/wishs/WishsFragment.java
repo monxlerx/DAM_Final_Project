@@ -15,6 +15,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -71,6 +72,10 @@ public class WishsFragment extends Fragment {
         session = new UserSessionManager(getContext());
         HashMap<String, String> user = session.getUserDetails();
         email = user.get(UserSessionManager.KEY_EMAIL);
+
+        //Add a text if the list view is empty
+        TextView emptyText = (TextView) root.findViewById(R.id.tx_empty);
+        mWishsList.setEmptyView(emptyText);
 
         // Setup
         mWishsList.setAdapter(mWishsAdapter);

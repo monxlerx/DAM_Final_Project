@@ -140,6 +140,9 @@
     <string name="check_login_favourite">Debes iniciar sesión para ver tus favoritos</string>
     <string name="share_app_message">Debes modificar tus preferencias en Configuración para compartir la aplicación</string>
 
+    <!--Empty Text Favourite-->
+    <string name="empty_favourite">Aún no tienes favoritos</string>
+
     <!--Términos y condiciones-->
     <string name="title">TÉRMINOS DE USO Y POLÍTICA DE PRIVACIDAD PARA APLICACIONES MÓVILES Y ACCESO DESDE DISPOSITIVOS MÓVILES
     </string>
