@@ -72,8 +72,6 @@ public class ProductsFragment extends Fragment {
         // Setup
         mProductsList.setAdapter(mProductsAdapter);
 
-        // Events
-
         //Test to check if the bundle has been passed correctly from the activity to the fragment
         tag = getArguments().getString("CategoryMenu");
 
@@ -239,8 +237,6 @@ public class ProductsFragment extends Fragment {
             }
         });
 
-
-
         // Loading data. It is mandatory, get all data that have been filtered by category in fragment_menu_bar
         loadProducts();
 
@@ -273,7 +269,7 @@ public class ProductsFragment extends Fragment {
 
     private void showSuccessfullSavedMessage() {
         Toast.makeText(getActivity(),
-                "Producto guardado correctamente", Toast.LENGTH_SHORT).show();
+                getActivity().getString(R.string.add_product_message), Toast.LENGTH_SHORT).show();
     }
 
     private void showAddScreen() {

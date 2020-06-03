@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.util.Config;
 import android.widget.Toast;
 
+import com.example.dam_project.R;
 import com.example.dam_project.data.model.User;
 import com.example.dam_project.sessionmanagment.UserSessionManager;
 
@@ -42,7 +43,7 @@ public class JavaMailAPI extends AsyncTask<Void,Void,Void> {
     protected void onPreExecute() {
         super.onPreExecute();
         //Show progress dialog while sending email
-        mProgressDialog = ProgressDialog.show(mContext,"Enviando mensaje", "Por favor espera...",false,false);
+        mProgressDialog = ProgressDialog.show(mContext, mContext.getString(R.string.sending_email), mContext.getString(R.string.sending_email),false,false);
     }
 
     @Override
@@ -52,7 +53,7 @@ public class JavaMailAPI extends AsyncTask<Void,Void,Void> {
         mProgressDialog.dismiss();
 
         //Show success toast
-        Toast.makeText(mContext,"Mensaje Enviado",Toast.LENGTH_SHORT).show();
+        Toast.makeText(mContext, mContext.getString(R.string.sending_email_ok),Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -59,7 +59,6 @@ public class ShareApplicationActivity extends AppCompatActivity {
                         sendIntent.setType("text/plain");
                         sendIntent.setPackage("com.instagram.android");
                         startActivity(sendIntent);
-                        Toast.makeText(ShareApplicationActivity.this, "Mensaje enviado", Toast.LENGTH_LONG).show();
                         break;
 
                     case 1:
@@ -72,7 +71,6 @@ public class ShareApplicationActivity extends AppCompatActivity {
                         sendIntent.putExtra(Intent.EXTRA_TEXT, "Descarga la aplicación de Casa Juan, https://drive.google.com/file/d/1Tr-q7XqfTkYXH60vdhHweLhxUkj5XnLn/view?usp=sharing");
                         sendIntent.setType("text/plain");
                         startActivity(sendIntent);
-                        Toast.makeText(ShareApplicationActivity.this, "Mensaje enviado", Toast.LENGTH_LONG).show();
                         break;
 
                     case 2:
@@ -83,7 +81,6 @@ public class ShareApplicationActivity extends AppCompatActivity {
                         sendIntent.setType("text/plain");
                         sendIntent.setPackage("com.whatsapp");
                         startActivity(sendIntent);
-                        Toast.makeText(ShareApplicationActivity.this, "Mensaje enviado", Toast.LENGTH_LONG).show();
                         break;
 
                     case 3:
@@ -94,7 +91,6 @@ public class ShareApplicationActivity extends AppCompatActivity {
                        sendIntent.setType("text/plain");
                        Intent shareIntent = Intent.createChooser(sendIntent, null);
                        startActivity(shareIntent);
-                       Toast.makeText(ShareApplicationActivity.this, "Mensaje enviado", Toast.LENGTH_LONG).show();
                         break;
                 }
             }

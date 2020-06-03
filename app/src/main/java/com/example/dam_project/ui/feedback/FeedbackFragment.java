@@ -67,11 +67,11 @@ public class FeedbackFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(radioGroup.getCheckedRadioButtonId() == -1){
-                    Toast.makeText(getActivity(), "Selecciona una calificación", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getActivity().getString(R.string.feedback_rating), Toast.LENGTH_SHORT).show();
                 } else if (etComment.getText().toString().trim().length() == 0) {
-                    Toast.makeText(getActivity(), "Introduce un comentario", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getActivity().getString(R.string.feedback_add_commentary), Toast.LENGTH_SHORT).show();
                 } else if (name == null) {
-                    Toast.makeText(getActivity(), "Debes iniciar sesión", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getActivity().getString(R.string.feedback_login), Toast.LENGTH_SHORT).show();
                 } else {
                     sendMail();
                     etComment.setText("");

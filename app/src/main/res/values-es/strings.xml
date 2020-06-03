@@ -111,6 +111,34 @@
     <string name="lang_summary_on">Inglés</string>
     <string name="lang_summary_off">Español</string>
 
+    <!--Share configuration-->
+    <string name="share_enable">Permitir la opción de compartir</string>
+
+    <!--Contenido de los Toasts-->
+    <string name="add_information">Error al cargar nueva información</string>
+    <string name="edit_product">Error editando el producto</string>
+    <string name="sending_email">Enviando mensaje</string>
+    <string name="sending_email_ok">Mensaje enviado</string>
+    <string name="validate_email">Por favor, introduce un email válido</string>
+    <string name="validate_password">Por favor, introduce un password válido</string>
+    <string name="password_short">El password es demasido corto.</string>
+    <string name="validate_user">Por favor, introduce un usuario válido</string>
+    <string name="username_short">El nombre de usuario es demasiado corto</string>
+    <string name="already_added_favourites">Ya estaba añadido a favoritos</string>
+    <string name="added_favourites">Añadido a favoritos</string>
+    <string name="login_favourites">Debes iniciar sesión para guardar tus favoritos</string>
+    <string name="error_loading_product">Error al cargar información</string>
+    <string name="error_deleting_product">Error al borrar el producto</string>
+    <string name="add_product_message">El producto se ha guardado correctamente</string>
+    <string name="feedback_rating">Selecciona una calificación</string>
+    <string name="feedback_add_commentary">Añade un comentario</string>
+    <string name="feedback_login">Debes iniciar sesión</string>
+    <string name="delete_favourites">Se ha eliminado de tus favoritos</string>
+    <string name="error_adding_favourites">Error al cargar información</string>
+    <string name="error_deleting_favourites">Error al borrar el producto de favoritos</string>
+    <string name="save_product_ok">Producto guardado correctamente</string>
+    <string name="check_login_favourite">Debes iniciar sesión para ver tus favoritos</string>
+
     <!--Términos y condiciones-->
     <string name="title">TÉRMINOS DE USO Y POLÍTICA DE PRIVACIDAD PARA APLICACIONES MÓVILES Y ACCESO DESDE DISPOSITIVOS MÓVILES
     </string>

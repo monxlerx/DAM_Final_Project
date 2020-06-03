@@ -10,7 +10,7 @@
     <string name="action_order">Order</string>
 
     <string name="menu_orders">Your orders</string>
-    <string name="menu_promotions">Promotions</string>
+    <string name="menu_promotions">Our restaurant</string>
     <string name="menu_help">Help</string>
     <string name="menu_feedback">Give us feedback</string>
     <string name="menu_menuBar">Menu</string>
@@ -111,6 +111,34 @@
     <string name="language_title">Language</string>
     <string name="lang_summary_on">English</string>
     <string name="lang_summary_off">Spanish</string>
+
+    <!--Share configuration-->
+    <string name="share_enable">Enable share option</string>
+
+    <!--All Toasts-->
+    <string name="add_information">Error adding new information</string>
+    <string name="edit_product">Error editing product</string>
+    <string name="sending_email">Sending message</string>
+    <string name="sending_email_ok">Message sent</string>
+    <string name="validate_email">Please enter a valid email</string>
+    <string name="validate_password">Please enter a valid password</string>
+    <string name="password_short">Password is too short</string>
+    <string name="validate_user">Please enter a valid user</string>
+    <string name="username_short">Username is too short</string>
+    <string name="already_added_favourites">Already added to favorites</string>
+    <string name="added_favourites">Added to favorites</string>
+    <string name="login_favourites">You must be logged in to save your favorites</string>
+    <string name="error_loading_product">Error loading information</string>
+    <string name="error_deleting_product">Error deleting product</string>
+    <string name="add_product_message">Product saved correctly</string>
+    <string name="feedback_rating">Select a rating</string>
+    <string name="feedback_add_commentary">Add a commentary</string>
+    <string name="feedback_login">You must log in</string>
+    <string name="delete_favourites">Removed from your favorites</string>
+    <string name="error_adding_favourites">Error loading information</string>
+    <string name="error_deleting_favourites">Error deleting a favourite product</string>
+    <string name="save_product_ok">Product saved correctly</string>
+    <string name="check_login_favourite">You must be logged in to see your favorites</string>
 
     <!--Terms and conditions-->
     <string name="title">TERMS OF USE AND PRIVACY POLICY FOR MOBILE APPLICATIONS AND ACCESS FROM MOBILE DEVICES

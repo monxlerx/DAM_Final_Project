@@ -54,13 +54,6 @@ public class WishsCursorAdapter extends CursorAdapter {
         String category = cursor.getString(cursor.getColumnIndex(WishContract.WishEntry.WISH_CATEGORY));
         String prize = cursor.getString(cursor.getColumnIndex(WishContract.WishEntry.WISH_PRIZE));
 
-        //Set Values
-        //nameText.setText(name);
-        //descriptionText.setText(description);
-        //categoryText.setText(category);
-        //prizeText.setText(prize);
-
-
         // Setup.
         nameText.setText(name);
         Glide

@@ -31,10 +31,6 @@ public class OrderFragment extends Fragment {
             }
         });
 
-
-        //En onCreateView es donde deb aparecer toda el layour
-        //EN onCreate donde se debe cargar lo necesario que queremos que apareczea y que permanezca a los difetentrsd cambios de estado (base de datos)
-
         return root;
     }
 }

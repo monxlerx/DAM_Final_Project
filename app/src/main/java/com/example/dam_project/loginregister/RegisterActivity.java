@@ -106,20 +106,20 @@ public class RegisterActivity extends AppCompatActivity {
         //Handling validation for UserName field
         if (UserName.isEmpty()) {
             valid = false;
-            Toast.makeText(this, "Please enter a valid user", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, this.getString(R.string.validate_user), Toast.LENGTH_SHORT).show();
         } else {
             if (UserName.length() > 5) {
                 valid = true;
             } else {
                 valid = false;
-                Toast.makeText(this, "Username is too short", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, this.getString(R.string.username_short), Toast.LENGTH_SHORT).show();
             }
         }
 
         //Handling validation for Email field
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
             valid = false;
-            Toast.makeText(this, "Please enter a valid email", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, this.getString(R.string.validate_email), Toast.LENGTH_SHORT).show();
         } else {
             valid = true;
         }
@@ -127,13 +127,13 @@ public class RegisterActivity extends AppCompatActivity {
         //Handling validation for Password field
         if (Password.isEmpty()) {
             valid = false;
-            Toast.makeText(this, "Please enter a valid password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, this.getString(R.string.validate_password), Toast.LENGTH_SHORT).show();
         } else {
             if (Password.length() > 5) {
                 valid = true;
             } else {
                 valid = false;
-                Toast.makeText(this, "Password is to short", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, this.getString(R.string.password_short), Toast.LENGTH_SHORT).show();
             }
         }
 

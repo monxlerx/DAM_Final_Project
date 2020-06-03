@@ -150,8 +150,7 @@ public class AddEditProductFragment extends Fragment {
     }
 
     private void showAddEditError() {
-        Toast.makeText(getActivity(),
-                "Error al agregar nueva información", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getActivity().getString(R.string.add_information), Toast.LENGTH_SHORT).show();
     }
 
     private void showProduct(Product product) {
@@ -162,8 +161,7 @@ public class AddEditProductFragment extends Fragment {
     }
 
     private void showLoadError() {
-        Toast.makeText(getActivity(),
-                "Error al editar producto", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getActivity().getString(R.string.edit_product), Toast.LENGTH_SHORT).show();
     }
 
     private class GetProductByIdTask extends AsyncTask<Void, Void, Cursor> {

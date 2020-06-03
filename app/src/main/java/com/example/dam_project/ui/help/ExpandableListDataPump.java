@@ -11,7 +11,7 @@ public class ExpandableListDataPump {
 
         //Creating the content of expandable list (question and answer)
         List<String> navigationMenu = new ArrayList<String>();
-        navigationMenu.add("Al iniciar la aplicación aparece un menú dividido en seis categorías (ensaladas, entrantes, carnes, pescado, postres y bebidas. Puedes acceder al listado de cada uno de ellos presionando en una categoría." +
+        navigationMenu.add("Al iniciar la aplicación aparece un menú dividido en seis categorías (ensaladas, entrantes, carnes, pescado, postres y bebidas. Puedes acceder al listado de cada uno de ellos presionando en una categoría. " +
                 "Si queremos entrar en detalle, bastará con volver a presionar y podemos acceder a las características del mismo. ");
 
         List<String> sendFeecback = new ArrayList<String>();
@@ -22,7 +22,7 @@ public class ExpandableListDataPump {
                 "tu lista de favoritos. Es una forma sencilla de ir añadiendo lo que quieres y recordarlo en un futuro. Porque sabemos que volverás una y otra vez.");
 
         List<String> sharingApp = new ArrayList<String>();
-        sharingApp.add("Puedes hacerlo desde el apartado Ayuda > Compartir. Existen varias formas para ello. Puedes utilizar un código QR, enviar un enlace por WhatsApp, Instagram o Gmail. Si ninguna de estas opciones es la deseada" +
+        sharingApp.add("Puedes hacerlo desde el apartado Ayuda > Compartir. Existen varias formas para ello. Puedes utilizar un código QR, enviar un enlace por WhatsApp, Instagram o Gmail. Si ninguna de estas opciones es la deseada " +
                 "podemos presionar sobre Otros, así podemos elegir entre nuemerosas opciones que ofrece Android.");
 
 

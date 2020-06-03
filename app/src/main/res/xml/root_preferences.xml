@@ -45,7 +45,7 @@
 
         <SwitchPreferenceCompat
             app:key="share"
-            app:title="Enable share option" />
+            app:title="@string/share_enable" />
     </PreferenceCategory>
 
 </PreferenceScreen>

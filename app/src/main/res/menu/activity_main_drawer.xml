@@ -22,4 +22,5 @@
             android:icon="@drawable/ic_feedback_24px"
             android:title="@string/menu_feedback" />
     </group>
+
 </menu>

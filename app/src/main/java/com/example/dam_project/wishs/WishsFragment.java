@@ -112,7 +112,7 @@ public class WishsFragment extends Fragment {
 
     private void showSuccessfullSavedMessage() {
         Toast.makeText(getActivity(),
-                "Producto guardado correctamente", Toast.LENGTH_SHORT).show();
+                getActivity().getString(R.string.save_product_ok), Toast.LENGTH_SHORT).show();
     }
 
     private void showAddScreen() {

@@ -79,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
             textEmail.setText(email);
         }
 
-
         //Remove navigation bar to allow full screen view when the activity is onCreate
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
     }
@@ -110,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                         i = new Intent(this, WishsActivity.class);
                     } else {
                         i = new Intent(this, MainActivity.class);
-                        Toast.makeText(getApplicationContext(), "Debes iniciar sesión para ver tus favoritos", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.check_login_favourite), Toast.LENGTH_LONG).show();
                     }
                     startActivity(i);
                     finish();

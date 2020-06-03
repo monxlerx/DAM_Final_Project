@@ -110,7 +110,7 @@ public class WishDetailFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 new WishDetailFragment.DeleteWishTask().execute();
-                Toast.makeText(getActivity(), "Se ha eliminado de tus favoritos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), getActivity().getString(R.string.delete_favourites), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -185,12 +185,12 @@ public class WishDetailFragment extends Fragment {
 
     private void showLoadError() {
         Toast.makeText(getActivity(),
-                "Error al cargar información", Toast.LENGTH_SHORT).show();
+                getActivity().getString(R.string.error_adding_favourites), Toast.LENGTH_SHORT).show();
     }
 
     private void showDeleteError() {
         Toast.makeText(getActivity(),
-                "Error al eliminar favorito", Toast.LENGTH_SHORT).show();
+                getActivity().getString(R.string.error_deleting_favourites), Toast.LENGTH_SHORT).show();
     }
 
     private class GetWishByIdTask extends AsyncTask<Void, Void, Cursor> {

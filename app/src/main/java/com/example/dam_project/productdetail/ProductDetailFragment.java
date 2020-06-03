@@ -126,15 +126,15 @@ public class ProductDetailFragment extends Fragment {
                     //Check if the query has return some cursor. If the result is > 0, it is because there is a coincidence in the database.
                     Cursor cursorCoincidence = mProductsDbHelper.getWishCoincidence(name, email);
                     if(cursorCoincidence.getCount() > 0) {
-                        Toast.makeText(getActivity(), "Ya estaba añadido a favoritos", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), getContext().getString(R.string.already_added_favourites), Toast.LENGTH_SHORT).show();
                     } else {
                         Wish wish = new Wish(name, description,category, prize, avatar, email);
                         mProductsDbHelper.saveWish(wish);
                         mButtonFav.setBackgroundResource(R.drawable.ic_favorite_red_24);
-                        Toast.makeText(getContext(), "Se ha añadido a favoritos " , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), getContext().getString(R.string.added_favourites) , Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(getContext(), "Debes iniciar sesión para guardar tus favoritos" , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), getContext().getString(R.string.login_favourites) , Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -207,12 +207,12 @@ public class ProductDetailFragment extends Fragment {
 
     private void showLoadError() {
         Toast.makeText(getActivity(),
-                "Error al cargar información", Toast.LENGTH_SHORT).show();
+                getActivity().getString(R.string.error_loading_product), Toast.LENGTH_SHORT).show();
     }
 
     private void showDeleteError() {
         Toast.makeText(getActivity(),
-                "Error al eliminar producto", Toast.LENGTH_SHORT).show();
+                getActivity().getString(R.string.error_deleting_product), Toast.LENGTH_SHORT).show();
     }
 
     private class GetProductByIdTask extends AsyncTask<Void, Void, Cursor> {

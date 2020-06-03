@@ -29,4 +29,5 @@
         android:layout_centerVertical="true"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/ic_account_circle" />
+
 </RelativeLayout>
