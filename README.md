@@ -1,2 +1,2 @@
 # DAM_Final_Project
-dasdasdas
+Mobile application that implements the menu of a restaurant developed for Android.
